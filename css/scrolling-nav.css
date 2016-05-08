@@ -43,6 +43,19 @@ section {
     color: white;
 }
 
+.what-s-wrong-with-foia {
+    
+}
+
 .what-s-the-alternative {
-    background-color: #ddd;
+    background-color: #0D52A5;
+    color: white;
+    font-family: arial;
+    font-size: 15pt;
+    h1 {
+        color: #e63350;
+        font-size: 45px;
+        font-family: merriweather;
+    }
+    
 }
