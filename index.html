@@ -2,13 +2,8 @@
 layout: default
 ---
 
-<div class="home">
+{% assign sections = site.sections | sort: 'order' %}
+{% for section in sections %}
+	{{ section }}
+{% endfor %}
 
-  <ul class="post-list">
-    {% assign sections = site.sections | sort: 'order' %}
-    {% for section in sections %}
-    	{{section.content}}
-    {% endfor %}
-  </ul>
-
-</div>
