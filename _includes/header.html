@@ -19,10 +19,11 @@
                   <li class="hidden">
                       <a class="page-scroll" href="#page-top"></a>
                   </li>
-                  {% for sec in site.sections %}
-                    {% if sec.title %}
+                  {% assign sections = site.sections | sort: 'order' %}
+                  {% for section in sections %}
+                    {% if section.title %}
                       <li>
-                          <a class="page-scroll" href="#{{ sec.title | slugify }}">{{ sec.title }}</a>
+                          <a class="page-scroll" href="#{{ section.title | slugify }}">{{ section.title }}</a>
                       </li>
                     {% endif %}
                   {% endfor %}
