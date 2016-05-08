@@ -37,31 +37,3 @@ section {
     text-align: center;
     background: #fff;
 }
-
-.intro-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
-}
-
-.about-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-}
-
-.services-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
-}
-
-.contact-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-}
