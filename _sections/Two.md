@@ -1,5 +1,5 @@
 ---
-order: 1
-title: One
+order: 2
+title: Two
 ---
 This is section one!
