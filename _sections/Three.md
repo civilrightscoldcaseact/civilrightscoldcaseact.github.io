@@ -1,5 +1,5 @@
 ---
-order: 3
-title: Three
+order: 1
+title: One
 ---
-This is section three!
+This is section One!
