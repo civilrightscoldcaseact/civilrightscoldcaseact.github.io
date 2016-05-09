@@ -1,6 +1,7 @@
 ---
 order: 6
 title: What can I do?
+link: Help
 ---
 Well, for starters, share the news! Share this website and tell your friends and family about our efforts.
 
