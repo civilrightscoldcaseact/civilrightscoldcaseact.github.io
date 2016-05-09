@@ -21,9 +21,9 @@
                   </li>
                   {% assign sections = site.sections | sort: 'order' %}
                   {% for section in sections %}
-                    {% if section.title %}
+                    {% if section.link %}
                       <li>
-                          <a class="page-scroll" href="#{{ section.title | slugify }}">{{ section.title }}</a>
+                          <a class="page-scroll" href="#{{ section.link | slugify }}">{{ section.link }}</a>
                       </li>
                     {% endif %}
                   {% endfor %}
