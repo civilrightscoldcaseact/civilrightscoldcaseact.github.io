@@ -36,6 +36,10 @@ section {
     text-align: center;
     background: #fff;
     
+    h1{
+        font-family: merriweather, serif;
+        font-size: 34pt;
+    }
     font-family: arial;
     font-size: 15pt;
 }
@@ -44,7 +48,6 @@ section {
     padding-top: 150px;
     h1{
         font-family: merriweather;
-        font-size: 50pt;
     }
     background-image: linear-gradient(60deg,rgba(0,36,61,0.7) -10%,rgba(0,144,239,0.8) 100%), url(https://upload.wikimedia.org/wikipedia/commons/4/4f/US_Capitol_west_side.JPG);
     background-size: cover;
@@ -58,7 +61,6 @@ section {
     h1{
         font-family: merriweather;
         color: #e63350;
-        font-size: 40px;
     }
     background-image: linear-gradient(0deg, rgba(255, 255, 255, .85) 0%, rgba(255, 255, 255, 0.85) 100%), url(http://i.imgur.com/Ef0nCQp.jpg);
     background-attachment: fixed;
@@ -77,21 +79,26 @@ section {
     
     h1 {
         color: #23a7ff;
-        font-size: 45px;
-        font-family: merriweather;
     }
 }
 .why {
-    
+    background-color: #F3F3F3;
     h1 {
         color: #e63350;
-        font-family: merriweeather;
-        font-size: 45px;
     }
     
 }
 
 .security {
-    background-color: #F3F3F3;
+    h1{
+        color: #0D52A5;
+    }
     
+}
+
+.help{
+    background-color: #F3F3F3;
+    h1{
+        color: #e63350;
+    }
 }
