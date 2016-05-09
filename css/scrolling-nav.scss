@@ -60,6 +60,11 @@ section {
         color: #e63350;
         font-size: 40px;
     }
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, .85) 0%, rgba(255, 255, 255, 0.85) 100%), url(http://i.imgur.com/Ef0nCQp.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 200px;
     #slateLink{
         color: #23a7ff;
         text-decoration: underline;
