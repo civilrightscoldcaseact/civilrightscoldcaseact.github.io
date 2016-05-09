@@ -1,6 +1,7 @@
 ---
 order: 5
 title: Aren't there security problems?
+link: Security
 ---
 
 No. Part of the bill allows the president to override any decision of the review board. 
