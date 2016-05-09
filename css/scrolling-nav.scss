@@ -35,15 +35,13 @@ section {
     padding-bottom: 100px;
     text-align: center;
     background: #fff;
-    
-    h1{
-        font-family: merriweather;
-    }
 }
 
 .what-s-this {
+    padding-top: 150px;
     h1{
-        font-size: 45pt;
+        font-family: merriweather;
+        font-size: 50pt;
     }
     background-image: linear-gradient(60deg,rgba(0,36,61,0.7) -10%,rgba(0,144,239,0.8) 100%), url(https://upload.wikimedia.org/wikipedia/commons/4/4f/US_Capitol_west_side.JPG);
     background-size: cover;
@@ -55,10 +53,11 @@ section {
 
 .what-s-wrong-with-foia {
     font-family: arial;
-    font-size: 15pt;
+    font-size: 14.5pt;
     h1{
+        font-family: merriweather;
         color: #e63350;
-        font-size: 30pt;
+        font-size: 40px;
     }
     #slateLink{
         color: #23a7ff;
@@ -74,7 +73,8 @@ section {
     
     h1 {
         color: #e63350;
-        font-size: 32pt;
+        font-size: 45px;
+        font-family: merriweather;
     }
 }
 .why-is-this-important {
@@ -83,7 +83,8 @@ section {
     
     h1 {
         color: #23a7ff;
-        font-size: 32pt;
+        font-family: merriweeather;
+        font-size: 45px;
     }
     
 }
