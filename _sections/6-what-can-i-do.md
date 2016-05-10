@@ -17,4 +17,4 @@ If you'd like to participate directly, send us an email and tell us how you'd li
 
 Using your information, we can generate content for you to send to your congresspersons, and suggest other ways for you to help.
 
-Contact us at coldcasecrowdsource@gmail.com!
+Contact us at [coldcasecrowdsource@gmail.com](mailto:coldcasecrowdsource@gmail.com)!
