@@ -62,7 +62,7 @@ section {
         font-family: merriweather;
         color: #e63350;
     }
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, .85) 0%, rgba(255, 255, 255, 0.85) 100%), url(http://i.imgur.com/Ef0nCQp.jpg);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, .85) 0%, rgba(255, 255, 255, 0.85) 100%), url({{ site.baseurl }}/images/redacted.jpg);
     background-attachment: fixed;
     background-size: cover;
     padding-top: 150px;
