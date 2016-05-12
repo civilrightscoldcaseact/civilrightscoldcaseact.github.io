@@ -40,6 +40,12 @@ section {
         font-family: merriweather, serif;
         font-size: 34pt;
     }
+    
+    ul, ol {
+        text-align: left;
+        display: inline-block;
+    }
+
     font-family: arial;
     font-size: 15pt;
 }
@@ -101,9 +107,4 @@ section {
     h1{
         color: #e63350;
     }
-}
-
-ul, ol {
-    text-align: left;
-    display: inline-block;
 }
