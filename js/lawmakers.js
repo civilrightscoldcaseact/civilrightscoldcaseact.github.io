@@ -26,7 +26,7 @@ $(function () {
 					});
 				}, function () {
 					$(this).prop('disabled');
-					$('#location-alert').show();
+					$('#lawmaker-container').before($('#location-alert').html());
 				});
 			});
 		}
@@ -92,11 +92,11 @@ $(function () {
 			$('#lawmaker-list').show();
 
 			if (senators > 2) {
-				$('#senators-warning').show();
+				$('#lawmaker-container').prepend($('#senators-warning').html());
 			}
 
 			if (representatives > 1) {
-				$('#representatives-warning').show();
+				$('#lawmaker-container').prepend($('#representatives-warning').html());
 			}
 		};
 	});

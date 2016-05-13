@@ -22,19 +22,7 @@ If you're in the United States and want to participate directly, we can help you
 				</div>
 			</div>
 		</div>
-		<div class="alert alert-danger alert-dismissible fade in" id="location-alert" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<strong>Failed</strong> to retrieve location. You can use the zip code search instead.
-		</div>
 		<div id="lawmaker-container">
-			<div class="alert alert-warning alert-dismissible fade in" id="senators-warning" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong>Warning:</strong> Your zip code spans multiple states, so more than two senators were found. Make sure you pick the senators for your state.
-			</div>
-			<div class="alert alert-warning alert-dismissible fade in" id="representatives-warning" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong>Warning:</strong> Your zip code spans multiple districts, so more than one representative was found. Make sure you pick the representative for your district.
-			</div>
 			<table id="lawmaker-list" class="table table-striped">
 				<thead>
 					<tr>
@@ -49,5 +37,25 @@ If you're in the United States and want to participate directly, we can help you
 			</table>
 		</div>
 		<div id="email-text"></div>
+		<div class="alerts">
+			<div id="location-alert">
+				<div class="alert alert-danger alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<strong>Failed</strong> to retrieve location. You can use the zip code search instead.
+				</div>
+			</div>
+			<div id="senators-warning">
+				<div class="alert alert-warning alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<strong>Warning:</strong> Your zip code spans multiple states, so more than two senators were found. Make sure you pick the senators for your state.
+				</div>
+			</div>
+			<div id="representatives-warning">
+				<div class="alert alert-warning alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<strong>Warning:</strong> Your zip code spans multiple districts, so more than one representative was found. Make sure you pick the representative for your district.
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
