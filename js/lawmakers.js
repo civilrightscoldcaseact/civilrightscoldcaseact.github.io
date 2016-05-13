@@ -39,56 +39,63 @@ $(function () {
 			});
 		});
 
-		var renderResults = function (results) {
+		 renderResults = function (results) {
 			$('#lawmaker-list tbody').html('');
 
-			var senators = [];
-			var representatives = [];
+			results.sort(function (a, b) {
+				var ranks = {
+					'Sen': 0,
+					'Rep': 1,
+					'Del': 2,
+					'Com': 3
+				};
+
+				return ranks[a.title] - ranks[b.title];
+			});
+
+			var senators = 0;
+			var representatives = 0;
 
 			for (var i = 0; i < results.length; i++) {
 				var person = results[i];
+				var extended_title;
 				if (person.title === 'Sen') {
-					senators.push(person);
-				} else {
-					representatives.push(person);
+					extended_title = 'Senator';
+					senators++;
+				} else if (person.title === 'Rep') {
+					extended_title = 'Representative';
+					representatives++;
+				} else if (person.title === 'Del') {
+					extended_title = 'Delegate';
+				} else if (person.title === 'Com') {
+					extended_title = 'Commissioner';
 				}
-			}
 
-			for (var i = 0; i < senators.length; i++) {
-				var email = legislativeEmails[senators[i].bioguide_id];
+				var email = legislativeEmails[person.bioguide_id];
 				if (email === undefined) {
-					email = senators[i].oc_email;
+					email = person.oc_email;
+				}
+
+				var district = person.state;
+				if (extended_title === 'Representative') {
+					district += person.district;
 				}
 
 				$('#lawmaker-list tbody').append($('<tr>').append(
-					$('<td>').text('Senator'),
-					$('<td>').text(senators[i].first_name + ' ' + senators[i].last_name),
-					$('<td>').text(senators[i].state),
-					$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email))
-				));
-			}
-			
-			for (var i = 0; i < representatives.length; i++) {
-				var email = legislativeEmails[representatives[i].bioguide_id];
-				if (email === undefined) {
-					email = representatives[i].oc_email;
-				}
-
-				$('#lawmaker-list tbody').append($('<tr>').append(
-					$('<td>').text('Representative'),
-					$('<td>').text(representatives[i].first_name + ' ' + representatives[i].last_name),
-					$('<td>').text(representatives[i].state + ' ' + representatives[i].district),
+					$('<td>').text(extended_title),
+					$('<td>').text(person.first_name + ' ' + person.last_name),
+					$('<td>').text(district),
 					$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email))
 				));
 			}
 
 			$('#lawmaker-list').show();
 
-			if (senators.length > 2) {
+			if (senators > 2) {
 				$('#senators-warning').show();
 			}
 
-			if (representatives.length > 1) {
+			if (representatives > 1) {
 				$('#representatives-warning').show();
 			}
 		};
