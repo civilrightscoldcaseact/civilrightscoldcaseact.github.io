@@ -56,10 +56,16 @@ If you're in the United States and want to participate directly, we can help you
 					<strong>Warning:</strong> Your zip code spans multiple districts, so more than one representative was found. Make sure you pick the representative for your district.
 				</div>
 			</div>
-			<div id="no-lawmakers">
+			<div id="no-lawmakers-location">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<strong>No lawmakers</strong> were found for your area. If you are in the United States, try using a zip code to search instead.
+				</div>
+			</div>
+			<div id="no-lawmakers-zip">
+				<div class="alert alert-danger alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<strong>No lawmakers</strong> were found for your area. Check your zip code.
 				</div>
 			</div>
 		</div>

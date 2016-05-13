@@ -22,7 +22,7 @@ $(function () {
 					var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?latitude=' + latitude + '&longitude=' + longitude + '&apikey=' + SUNLIGHT_API_KEY;
 
 					$.get(url, function (data) {
-						renderResults(data.results);
+						renderResults(data.results, 'location');
 					});
 				}, function () {
 					$(this).prop('disabled');
@@ -35,13 +35,17 @@ $(function () {
 			var zip = encodeURIComponent($('#find-lawmakers-zip-text').val().trim());
 			var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zip + '&apikey=' + SUNLIGHT_API_KEY;
 			$.get(url, function (data) {
-				renderResults(data.results);
+				renderResults(data.results, 'zip');
 			});
 		});
 
-		var renderResults = function (results) {
+		var renderResults = function (results, type) {
 		 	if (results.length === 0) {
-		 		$('#lawmaker-container').before($('#no-lawmakers').html());
+		 		if (type === 'zip') {
+		 			$('#lawmaker-container').before($('#no-lawmakers-zip').html());
+		 		} else {
+		 			$('#lawmaker-container').before($('#no-lawmakers-location').html());
+		 		}
 		 		return;
 		 	}
 
