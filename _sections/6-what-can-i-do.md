@@ -23,7 +23,7 @@ If you're in the United States and want to participate directly, we can help you
 			</div>
 		</div>
 		<div id="lawmaker-container">
-			<table id="lawmaker-list" class="table table-striped">
+			<table id="lawmaker-list" class="table table-striped table-responsive">
 				<thead>
 					<tr>
 						<td>Role</td>
