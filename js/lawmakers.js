@@ -39,7 +39,12 @@ $(function () {
 			});
 		});
 
-		 renderResults = function (results) {
+		var renderResults = function (results) {
+		 	if (results.length === 0) {
+		 		$('#lawmaker-container').before($('#no-lawmakers').html());
+		 		return;
+		 	}
+
 			$('#lawmaker-list tbody').html('');
 
 			results.sort(function (a, b) {
