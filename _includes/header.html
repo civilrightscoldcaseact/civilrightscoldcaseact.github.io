@@ -23,7 +23,7 @@
                   {% for section in sections %}
                     {% if section.link %}
                       <li>
-                          <a class="page-scroll" href="#{{ section.link | slugify }}" data-toggle="collapse" data-target=".navbar-ex1-collapse">{{ section.link }}</a>
+                          <a class="page-scroll" href="#{{ section.link | slugify }}">{{ section.link }}</a>
                       </li>
                     {% endif %}
                   {% endfor %}
