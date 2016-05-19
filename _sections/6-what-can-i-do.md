@@ -36,6 +36,7 @@ If you're in the United States and want to participate directly, we can help you
 				</tbody>
 			</table>
 		</div>
+		<div id="loadingDiv">Loading lawmaker data...</div>
 		<div id="email-text"></div>
 		<div class="alerts">
 			<div id="location-alert">
