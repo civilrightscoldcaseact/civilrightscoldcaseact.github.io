@@ -30,6 +30,7 @@ If you're in the United States and want to participate directly, we can help you
 						<td>Name</td>
 						<td>District</td>
 						<td>Legislative Director Email</td>
+						<td>Phone</td>
 					</tr>
 				</thead>
 				<tbody>

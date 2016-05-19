@@ -99,7 +99,8 @@ $(function () {
 					$('<td>').text(extended_title),
 					$('<td>').text(person.first_name + ' ' + person.last_name),
 					$('<td>').text(district),
-					$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email))
+					$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email)),
+					$('<td>').text(person.phone);
 				));
 			}
 
