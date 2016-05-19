@@ -34,7 +34,14 @@ $(function () {
 			});
 		}
 
-		$('#find-lawmakers-zip').prop('disabled', false).click(function () {
+		$('#find-lawmakers-zip').prop('disabled', false).click(searchZip);
+		$('#find-lawmakers-zip-text').keydown(function (e) {
+			if (e.which === 13) {
+				searchZip();
+			}
+		});
+
+		var searchZip = function () {
 			$('#loadingDiv').show();
 			var zip = encodeURIComponent($('#find-lawmakers-zip-text').val().trim());
 			var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zip + '&apikey=' + SUNLIGHT_API_KEY;
@@ -42,7 +49,7 @@ $(function () {
 				$('#loadingDiv').hide();
 				renderResults(data.results, 'zip');
 			});
-		});
+		};
 
 		var renderResults = function (results, type) {
 		 	if (results.length === 0) {
