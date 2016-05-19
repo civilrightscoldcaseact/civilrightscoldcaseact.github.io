@@ -100,7 +100,7 @@ $(function () {
 					$('<td>').text(person.first_name + ' ' + person.last_name),
 					$('<td>').text(district),
 					$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email)),
-					$('<td>').text(person.phone);
+					$('<td>').text(person.phone)
 				));
 			}
 
