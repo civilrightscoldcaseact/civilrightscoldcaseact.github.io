@@ -34,7 +34,9 @@ $(function () {
 			});
 		}
 
-		$('#find-lawmakers-zip').prop('disabled', false).click(searchZip);
+		$('#find-lawmakers-zip').prop('disabled', false).click(function () {
+			searchZip();
+		});
 		$('#find-lawmakers-zip-text').keydown(function (e) {
 			if (e.which === 13) {
 				searchZip();
