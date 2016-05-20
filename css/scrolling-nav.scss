@@ -39,6 +39,7 @@ section {
     h1{
         font-family: merriweather, serif;
         font-size: 34pt;
+        color: #e63350;
     }
     
     ul, ol {
@@ -52,9 +53,11 @@ section {
 
 .about {
     padding-top: 150px;
-    h1{
-        font-family: merriweather;
+    
+    h1 {
+        color: white;
     }
+    
     background-image: linear-gradient(60deg, rgba(0, 36, 61, 0.7) -10%, rgba(0, 144, 239, 0.8) 100%), url({{ site.baseurl }}/images/Capitol-Martin-Falbisoner-CC-BY-SA.JPG);
     background-size: cover;
     background-position: center;
@@ -64,15 +67,12 @@ section {
 }
 
 .the-problem {
-    h1{
-        font-family: merriweather;
-        color: #e63350;
-    }
     background-image: linear-gradient(0deg, rgba(255, 255, 255, .85) 0%, rgba(255, 255, 255, 0.85) 100%), url({{ site.baseurl }}/images/redacted.jpg);
     background-attachment: fixed;
     background-size: cover;
     padding-top: 150px;
     padding-bottom: 200px;
+    
     #slateLink{
         color: #23a7ff;
         text-decoration: underline;
@@ -80,33 +80,19 @@ section {
 }
 
 .the-solution {
-    background-color: #0D52A5;
+    background-color: #002E64;
     color: white;
     
     h1 {
         color: #23a7ff;
     }
 }
-.why {
+.why, .help {
     background-color: #F3F3F3;
-    h1 {
-        color: #e63350;
-    }
-    
 }
 
-.security {
-    h1{
-        color: #0D52A5;
-    }
-    
-}
-
-.help{
-    background-color: #F3F3F3;
-    h1{
-        color: #e63350;
-    }
+.security h1 {
+    color: #0D52A5;
 }
 
 section table {
