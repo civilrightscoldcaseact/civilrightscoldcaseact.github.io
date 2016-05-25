@@ -5,6 +5,20 @@ $(function () {
 	$('#senators-warning, #representatives-warning').hide();
 	$('#lawmaker-list').hide();
 	$('#loadingDiv').hide();
+	
+	var judiciaryUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
+	var senateJudiciaryUrl = judiciaryUrl + 'SSJU';
+	var houseJudiciaryUrl = judiciaryUrl + 'HSJU';
+
+	senateJudiciaryMembers = [];
+	var houseJudiciaryMembers = [];
+
+	$.get(senateJudiciaryUrl, function (data) {
+		senateJudiciaryMembers = data.results[0].member_ids;
+	});
+	$.get(houseJudiciaryUrl, function (data) {
+		houseJudiciaryMembers = data.results[0].member_ids;
+	});
 
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
 		var legislativeEmails = {};
@@ -78,42 +92,67 @@ $(function () {
 
 			var senators = 0;
 			var representatives = 0;
-
+			
 			for (var i = 0; i < results.length; i++) {
-				var person = results[i];
-				var extended_title;
-				if (person.title === 'Sen') {
-					extended_title = 'Senator';
-					senators++;
-				} else if (person.title === 'Rep') {
-					extended_title = 'Representative';
-					representatives++;
-				} else if (person.title === 'Del') {
-					extended_title = 'Delegate';
-				} else if (person.title === 'Com') {
-					extended_title = 'Commissioner';
-				}
+				(function (i) {
+					var person = results[i];
+					var extended_title;
+					var judiciary = false;
+					if (person.title === 'Sen') {
+						extended_title = 'Senator';
+						for (var j = 0; j < senateJudiciaryMembers.length; j++) {
+							if (person.bioguide_id === senateJudiciaryMembers[j]) {
+								judiciary = true;
+							}
+						}
+						senators++;
+					} else if (person.title === 'Rep') {
+						extended_title = 'Representative';
+						for (var j = 0; j < houseJudiciaryMembers.length; j++) {
+							if (person.bioguide_id === houseJudiciaryMembers[j]) {
+								judiciary = true;
+							}
+						}
 
-				var email = legislativeEmails[person.bioguide_id];
-				if (email === undefined) {
-					email = person.oc_email;
-				}
+						representatives++;
+					} else if (person.title === 'Del') {
+						extended_title = 'Delegate';
+					} else if (person.title === 'Com') {
+						extended_title = 'Commissioner';
+					}
 
-				var district = person.state;
-				if (extended_title === 'Representative') {
-					district += person.district;
-				}
+					var email = legislativeEmails[person.bioguide_id];
+					if (email === undefined) {
+						email = person.oc_email;
+					}
 
-				$('#lawmaker-list tbody').append($('<tr>').append(
-					$('<td>').text(extended_title),
-					$('<td>').text(person.first_name + ' ' + person.last_name),
-					$('<td>').text(district),
-					$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email)),
-					$('<td>').text(person.phone)
-				));
+					var district = person.state;
+					if (extended_title === 'Representative') {
+						district += person.district;
+					}
+
+					var tr = $('<tr>').append(
+						$('<td>').text(extended_title),
+						$('<td>').text(person.first_name + ' ' + person.last_name),
+						$('<td>').text(district),
+						$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email)),
+						$('<td>').text(person.phone),
+						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
+							emailPopup(extended_title, person.last_name);
+						}))
+					);
+
+					if (judiciary) {
+						console.log(12);
+						tr.addClass('judiciary');
+					}
+					$('#lawmaker-list tbody').append(tr);
+				})(i);
 			}
 
 			$('#lawmaker-list').show();
+
+			$('#lawmaker-container').prepend($('#email-info').html());
 
 			if (senators > 2) {
 				$('#lawmaker-container').prepend($('#senators-warning').html());
@@ -125,3 +164,10 @@ $(function () {
 		};
 	});
 });
+
+var emailPopup = function (title, lastname) {
+	$('#emailModal .modal-body').html('');
+	$.get(baseUrl + 'emails/primary.html', function (data) {
+		$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
+	});
+};

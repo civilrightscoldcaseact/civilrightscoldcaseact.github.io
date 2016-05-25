@@ -31,6 +31,7 @@ If you're in the United States and want to participate directly, we can help you
 						<td>District</td>
 						<td>Legislative Director Email</td>
 						<td>Phone</td>
+						<td></td>
 					</tr>
 				</thead>
 				<tbody>
@@ -39,6 +40,21 @@ If you're in the United States and want to participate directly, we can help you
 		</div>
 		<div id="loadingDiv">Loading lawmaker data...</div>
 		<div id="email-text"></div>
+		<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="emailModalLabel">Sample email</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="alerts">
 			<div id="location-alert">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
@@ -68,6 +84,13 @@ If you're in the United States and want to participate directly, we can help you
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<strong>No lawmakers</strong> were found for your area. Check your zip code.
+				</div>
+			</div>
+			<div id="email-info">
+				<div class="alert alert-info alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					
+					Click the email icon next to a lawmaker's name for a sample email you can send.
 				</div>
 			</div>
 		</div>

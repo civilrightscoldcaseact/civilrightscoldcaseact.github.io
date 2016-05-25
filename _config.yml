@@ -14,14 +14,22 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://coldcaseact.com" # the base hostname & protocol for your site
 
 collections:
-  - sections
+  sections:
+    output: false
+  emails:
+    output: true
 
 defaults:
   -
     scope:
-      collection: sections
+      type: sections
     values:
       layout: section
+  -
+    scope:
+      type: emails
+    values:
+      layout: email
 
 # Build settings
 markdown: kramdown
