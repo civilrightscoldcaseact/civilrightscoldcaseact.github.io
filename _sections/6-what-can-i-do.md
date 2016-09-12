@@ -97,4 +97,4 @@ If you're in the United States and want to participate directly, we can help you
 	</div>
 </div>
 
-If you'd like to read even more about our bill, the full text can be found [here.](/images/thecivilrightscoldcaserecordscollectionactof2016.pdf)
+
