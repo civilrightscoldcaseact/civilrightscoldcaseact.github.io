@@ -63,6 +63,8 @@ section {
     background-position: center;
 
     color: white;
+    a {color: white; text-decoration: underline}
+    a:hover {text-decoration: none}
     
 }
 
