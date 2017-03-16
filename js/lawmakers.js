@@ -6,18 +6,26 @@ $(function () {
 	$('#lawmaker-list').hide();
 	$('#loadingDiv').hide();
 	
-	var judiciaryUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
-	var senateJudiciaryUrl = judiciaryUrl + 'SSJU';
-	var houseJudiciaryUrl = judiciaryUrl + 'HSJU';
+	var baseUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
+	var senateJudiciaryUrl = baseUrl + 'SSJU';
+	var houseJudiciaryUrl = baseUrl + 'HSJU';
 
-	senateJudiciaryMembers = [];
+	var houseOversightUrl = baseUrl + 'HSGO';
+
+	var senateJudiciaryMembers = [];
 	var houseJudiciaryMembers = [];
+
+	var houseOversightMembers = [];
 
 	$.get(senateJudiciaryUrl, function (data) {
 		senateJudiciaryMembers = data.results[0].member_ids;
 	});
 	$.get(houseJudiciaryUrl, function (data) {
 		houseJudiciaryMembers = data.results[0].member_ids;
+	});
+
+	$.get(houseOversightUrl, function (data) {
+		houseOversightMembers = data.results[0].member_ids;
 	});
 
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
