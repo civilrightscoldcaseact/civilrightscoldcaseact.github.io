@@ -162,7 +162,7 @@ $(function () {
 
 					if(oversight) {
 						console.log(13);											//FIXME: Not sure what number to log
-						tr.addClass('oversight');
+						tr.addClass('judiciary');
 					}
 
 					$('#lawmaker-list tbody').append(tr);
@@ -187,7 +187,7 @@ $(function () {
 var emailPopup = function (title, lastname, isOversight) {
 	if(!isOversight) {
 		$('#emailModal .modal-body').html('');
-		$.get(baseUrl + 'emails/secondary.html', function (data) {
+		$.get(baseUrl + 'emails/primary.html', function (data) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
