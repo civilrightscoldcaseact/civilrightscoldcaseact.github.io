@@ -11,13 +11,13 @@ If you're in the United States and want to participate directly, we can help you
 	<div class="panel-body">
 		<div class="row">
 			<div class="col-md-3 col-md-offset-3">
-				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>
+				<button id="find-lawmakers-location" disabled="enabled" class="btn btn-primary">Use my location</button>
 			</div>
 			<div class="col-md-3">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="zip code" id="find-lawmakers-zip-text">
 					<span class="input-group-btn">
-						<button id="find-lawmakers-zip" disabled="disabled" class="btn btn-primary">Search by zip</button>
+						<button id="find-lawmakers-zip" disabled="enabled" class="btn btn-primary">Search by zip</button>
 					</span>
 				</div>
 			</div>
@@ -89,12 +89,10 @@ If you're in the United States and want to participate directly, we can help you
 			<div id="email-info">
 				<div class="alert alert-info alert-dismissible fade in" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					
+
 					Click the email icon next to a lawmaker's name for a sample email you can send.
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-
