@@ -1,6 +1,5 @@
 ---
 order: 1
-title: Dick?
 link: About
 ---
 
