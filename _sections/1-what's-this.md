@@ -1,6 +1,5 @@
 ---
 order: 1
-title: What's this?
 link: About
 ---
 
