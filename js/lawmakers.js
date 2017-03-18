@@ -6,9 +6,9 @@ $(function () {
 	$('#lawmaker-list').hide();
 	$('#loadingDiv').hide();
 
-	var judiciaryUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
-	var senateJudiciaryUrl = judiciaryUrl + 'SSJU';
-	var houseJudiciaryUrl = judiciaryUrl + 'HSJU';
+	var baseUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
+	var senateJudiciaryUrl = baseUrl + 'SSJU';
+	///var houseJudiciaryUrl = baseUrl + 'HSJU';
 
 	//var houseOversightUrl = baseUrl + 'HSGO';
 
