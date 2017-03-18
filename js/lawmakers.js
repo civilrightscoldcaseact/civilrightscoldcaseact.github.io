@@ -5,7 +5,7 @@ $(function () {
 	$('#senators-warning, #representatives-warning').hide();
 	$('#lawmaker-list').hide();
 	$('#loadingDiv').hide();
-	
+
 	var baseUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
 	var senateJudiciaryUrl = baseUrl + 'SSJU';
 	var houseJudiciaryUrl = baseUrl + 'HSJU';
@@ -100,12 +100,13 @@ $(function () {
 
 			var senators = 0;
 			var representatives = 0;
-			
+
 			for (var i = 0; i < results.length; i++) {
 				(function (i) {
 					var person = results[i];
 					var extended_title;
 					var judiciary = false;
+					var oversight = false;
 					if (person.title === 'Sen') {
 						extended_title = 'Senator';
 						for (var j = 0; j < senateJudiciaryMembers.length; j++) {
@@ -121,7 +122,11 @@ $(function () {
 								judiciary = true;
 							}
 						}
-
+						for (var k = 0; k < houseOversightMembers.length; k++) {
+							if (person.bioguide_id === houseOversightMembers[k]) {
+								oversight = true;
+							}
+						}
 						representatives++;
 					} else if (person.title === 'Del') {
 						extended_title = 'Delegate';
@@ -146,7 +151,7 @@ $(function () {
 						$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email)),
 						$('<td>').text(person.phone),
 						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
-							emailPopup(extended_title, person.last_name);
+							emailPopup(extended_title, person.last_name, oversight);
 						}))
 					);
 
@@ -154,6 +159,12 @@ $(function () {
 						console.log(12);
 						tr.addClass('judiciary');
 					}
+
+					if(oversight) {
+						console.log(13);											//FIXME: Not sure what number to log
+						tr.addClass('oversight');
+					}
+
 					$('#lawmaker-list tbody').append(tr);
 				})(i);
 			}
@@ -173,9 +184,17 @@ $(function () {
 	});
 });
 
-var emailPopup = function (title, lastname) {
-	$('#emailModal .modal-body').html('');
-	$.get(baseUrl + 'emails/primary.html', function (data) {
-		$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
-	});
+var emailPopup = function (title, lastname, isOversight) {
+	if(!isOversight) {
+		$('#emailModal .modal-body').html('');
+		$.get(baseUrl + 'emails/primary.html', function (data) {
+			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
+		});
+	}
+	else {
+		$('#emailModal .modal-body').html('');
+		$.get(baseUrl + 'emails/secondary.html', function (data) {
+			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
+		});
+	}
 };
