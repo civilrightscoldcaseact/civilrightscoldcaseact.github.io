@@ -11,13 +11,13 @@ If you're in the United States and want to participate directly, we can help you
 	<div class="panel-body">
 		<div class="row">
 			<div class="col-md-3 col-md-offset-3">
-				<button id="find-lawmakers-location" disabled="enabled" class="btn btn-primary">Use my location</button>
+				<button id="find-lawmakers-location" disabled="false" class="btn btn-primary">Use my location</button>
 			</div>
 			<div class="col-md-3">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="zip code" id="find-lawmakers-zip-text">
 					<span class="input-group-btn">
-						<button id="find-lawmakers-zip" disabled="enabled" class="btn btn-primary">Search by zip</button>
+						<button id="find-lawmakers-zip" disabled="false" class="btn btn-primary">Search by zip</button>
 					</span>
 				</div>
 			</div>
