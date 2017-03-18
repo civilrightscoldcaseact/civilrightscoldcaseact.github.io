@@ -8,14 +8,14 @@ $(function () {
 
 	var baseUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
 	var senateJudiciaryUrl = baseUrl + 'SSJU';
-	///var houseJudiciaryUrl = baseUrl + 'HSJU';
+	var houseJudiciaryUrl = baseUrl + 'HSJU';
 
-	//var houseOversightUrl = baseUrl + 'HSGO';
+	var houseOversightUrl = baseUrl + 'HSGO';
 
 	var senateJudiciaryMembers = [];
 	var houseJudiciaryMembers = [];
 
-	//var houseOversightMembers = [];
+	var houseOversightMembers = [];
 
 	$.get(senateJudiciaryUrl, function (data) {
 		senateJudiciaryMembers = data.results[0].member_ids;
@@ -24,9 +24,9 @@ $(function () {
 		houseJudiciaryMembers = data.results[0].member_ids;
 	});
 
-	/*$.get(houseOversightUrl, function (data) {
+	$.get(houseOversightUrl, function (data) {
 		houseOversightMembers = data.results[0].member_ids;
-	});*/
+	});
 
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
 		var legislativeEmails = {};
@@ -122,11 +122,11 @@ $(function () {
 								judiciary = true;
 							}
 						}
-						/*for (var k = 0; k < houseOversightMembers.length; k++) {
+						for (var k = 0; k < houseOversightMembers.length; k++) {
 							if (person.bioguide_id === houseOversightMembers[k]) {
 								oversight = true;
 							}
-						}*/
+						}
 						representatives++;
 					} else if (person.title === 'Del') {
 						extended_title = 'Delegate';
@@ -151,8 +151,7 @@ $(function () {
 						$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email)),
 						$('<td>').text(person.phone),
 						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
-							emailPopup(extended_title, person.last_name);
-							//emailPopup(extended_title, person.last_name, oversight);
+							emailPopup(extended_title, person.last_name, oversight);
 						}))
 					);
 
@@ -161,11 +160,10 @@ $(function () {
 						tr.addClass('judiciary');
 					}
 
-					/*
 					if(oversight) {
 						console.log(13);											//FIXME: Not sure what number to log
 						tr.addClass('oversight');
-					}*/
+					}
 
 					$('#lawmaker-list tbody').append(tr);
 				})(i);
@@ -186,7 +184,7 @@ $(function () {
 	});
 });
 
-/*var emailPopup = function (title, lastname, isOversight) {
+var emailPopup = function (title, lastname, isOversight) {
 	if(!isOversight) {
 		$('#emailModal .modal-body').html('');
 		$.get(baseUrl + 'emails/primary.html', function (data) {
@@ -199,10 +197,4 @@ $(function () {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
-};*/
-var emailPopup = function (title, lastname) {
-	$('#emailModal .modal-body').html('');
-	$.get(baseUrl + 'emails/primary.html', function (data) {
-		$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
-	});
 };
