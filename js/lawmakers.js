@@ -29,7 +29,7 @@ $(function () {
 	});
 
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
-		data += "";
+		data += '';
 		var legislativeEmails = {};
 		var mailArray = data.split('\n');
 		for (var i = 0; i < mailArray.length; i++) {
