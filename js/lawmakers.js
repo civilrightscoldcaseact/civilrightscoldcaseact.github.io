@@ -159,15 +159,15 @@ $(function () {
 						}))
 					);
 
-					if (judiciary) {
+					if (judiciary || oversight) {
 						console.log(12);
 						tr.addClass('judiciary');
 					}
 
-					if(oversight) {
+					/*if(oversight) {
 						console.log(13);											//FIXME: Not sure what number to log
 						tr.addClass('judiciary');
-					}
+					}*/
 
 					$('#lawmaker-list tbody').append(tr);
 				})(i);
