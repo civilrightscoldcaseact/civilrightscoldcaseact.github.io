@@ -166,7 +166,7 @@ $(function () {
 
 					if(oversight) {
 						console.log(13);											//FIXME: Not sure what number to log
-						tr.addClass('oversight');
+						tr.addClass('judiciary');
 					}
 
 					$('#lawmaker-list tbody').append(tr);
