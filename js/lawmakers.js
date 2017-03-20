@@ -35,6 +35,7 @@ $(function () {
 			var kv = mailArray[i].split(',');
 			legislativeEmails[i] = kv[1];
 		}
+		console.log(legislativeEmails[0]);
 
 		if (navigator.geolocation) {
 			$('#find-lawmakers-location').prop('disabled', false).click(function () {
