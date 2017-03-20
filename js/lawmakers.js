@@ -33,8 +33,7 @@ $(function () {
 		var mailArray = data.toString().split('\n');
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].split(',');
-			legislativeEmails[kv[0]] = kv[1];
-			console.log(legislativeEmails[0]);
+			legislativeEmails[i] = kv[1];
 		}
 
 		if (navigator.geolocation) {
@@ -136,7 +135,7 @@ $(function () {
 						extended_title = 'Commissioner';
 					}
 
-					var email = legislativeEmails[person.bioguide_id];
+					var email = legislativeEmails[i];
 					if (email === undefined) {
 						email = person.oc_email;
 					}
