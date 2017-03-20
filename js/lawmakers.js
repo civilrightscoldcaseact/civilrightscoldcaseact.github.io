@@ -104,6 +104,7 @@ $(function () {
 			for (var i = 0; i < results.length; i++) {
 				(function (i) {
 					var person = results[i];
+					console.log(person.bioguide_id);
 					var extended_title;
 					var judiciary = false;
 					var oversight = false;
