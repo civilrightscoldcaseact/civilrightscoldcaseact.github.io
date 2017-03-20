@@ -34,7 +34,7 @@ $(function () {
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].toString().split(',');
 			legislativeEmails[i] = kv[1];
-			console.log(mailArray[i]);//email
+			console.log(mailArray[i]);
 			console.log(kv[0]);
 			console.log(kv[1]);
 		}
