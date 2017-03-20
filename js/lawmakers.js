@@ -34,8 +34,9 @@ $(function () {
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].split(',');
 			legislativeEmails[i] = kv[1];
+			console.log(kv[0]); //bioguide id
+			console.log(kv[1]); //email
 		}
-		console.log(legislativeEmails[0]);
 
 		if (navigator.geolocation) {
 			$('#find-lawmakers-location').prop('disabled', false).click(function () {
