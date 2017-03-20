@@ -1,3 +1,5 @@
+---
+---
 Dear ..TITLE.. ..LASTNAME..,
 
 I am writing you as a concerned citizen who is looking for your support in passing a law, designed by an Advanced Placement government class in New Jersey, titled the Civil Rights Cold Case Records Collection Act. This law will create an independent review board that will facilitate the release of records regarding civil rights cold cases to the public. Unfortunately, previous efforts, such as the Emmett Till Act, have resulted in no prosecutions from the Department of Justice while investigative reporters, historians, and local prosecutors have had a measure of success in re-opening and obtaining prosecutions in these cases.
