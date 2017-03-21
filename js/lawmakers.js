@@ -193,7 +193,7 @@ var emailPopup = function (title, lastname, isOversight) {
 		$('#emailModal .modal-body').html('');
 		$.get(baseUrl + 'emails/primary.html', function (data) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
-			writeData(person.lastname, person.zipcode, person.title, person.isOversight);
+
 		});
 	}
 	else {
@@ -202,11 +202,11 @@ var emailPopup = function (title, lastname, isOversight) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
+	writeData(person.lastname, person.zipcode, person.title, person.isOversight);
 };
 
 function writeData(name, zipcode, title, oversight) {
-	var lawmakerData =
-	{
+	var lawmakerData = {
 		name : name,
 		zipcode : zipcode,
 		title : title,
