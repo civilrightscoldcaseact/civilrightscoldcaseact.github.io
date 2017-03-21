@@ -215,5 +215,5 @@ function writeData(name, zipcode, title, oversight) {
 
 	var userID = firebase.auth().currentUser.uid;
 
-	database.ref('coldcases/' + userID).set(lawmakerData);
+	database.ref('cold-case/' + userID).set(lawmakerData);
 }
