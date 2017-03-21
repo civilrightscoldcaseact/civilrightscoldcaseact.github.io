@@ -30,9 +30,9 @@ $(function () {
 
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
 		var legislativeEmails = {};
-		data = data.replace(/\r\n/g, "\n");
-		data = data.replace(/\n\r/g, "\n");
-		data = data.replace(/\r/g, "\n");
+		//data = data.replace(/\r\n/g, "\n");
+		//data = data.replace(/\n\r/g, "\n");
+		//data = data.replace(/\r/g, "\n");
 		var mailArray = data.split('\n');
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].toString().split(',');
