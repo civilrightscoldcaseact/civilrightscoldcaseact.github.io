@@ -165,7 +165,7 @@ $(function () {
 					}
 
 					if(oversight) {
-						console.log(13);											//FIXME: Not sure what number to log
+						console.log(13);
 						tr.addClass('oversight');
 					}
 
@@ -193,6 +193,7 @@ var emailPopup = function (title, lastname, isOversight) {
 		$('#emailModal .modal-body').html('');
 		$.get(baseUrl + 'emails/primary.html', function (data) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
+			writeData(person.lastname, person.zipcode, person.title, person.isOversight);
 		});
 	}
 	else {
@@ -210,6 +211,9 @@ function writeData(name, zipcode, title, oversight) {
 		zipcode : zipcode,
 		title : title,
 		isOversight : oversight
-	};
+	}
 
+	var userID = firebase.auth().currentUser.uid;
+
+	database.ref('coldcases/' + userID).set(lawmakerData);
 }
