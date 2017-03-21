@@ -28,7 +28,7 @@ $(function () {
 		houseOversightMembers = data.results[0].member_ids;
 	});
 
-	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
+	$.get(baseUrl + 'files/legislative-directors.csv', function x(data) {
 		var legislativeEmails = {};
 		var mailArray = data.toString().split('\n');
 		for (var i = 0; i < mailArray.length; i++) {
