@@ -34,9 +34,7 @@ $(function () {
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].toString().split(',');
 			legislativeEmails[i] = kv[1];
-			alert.(JSON.stringify(mailArray[i]));
-			alert.(JSON.stringify(kv[0]));
-			alert.(JSON.stringify(kv[1]));
+			console.log(data)
 		}
 
 		if (navigator.geolocation) {
