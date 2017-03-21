@@ -211,7 +211,6 @@ function writeData(name, zipcode, title, oversight) {
 		isOversight : oversight
 	}
 
-	var userID = firebase.auth().currentUser.uid;
-
-	database.ref('cold-case/' + userID).set(lawmakerData);
+	var postsRef = ref.child("cold-case");
+	postsRef.push().set(lawmakerData);
 }
