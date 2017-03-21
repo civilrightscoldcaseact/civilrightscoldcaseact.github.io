@@ -213,6 +213,5 @@ function writeData(name, zipcode, title, oversight) {
 		isOversight : oversight
 	}
 
-	var postsRef = ref.child("cold-case");
-	postsRef.push().set(lawmakerData);
+	ref.push(lawmakerData);
 }
