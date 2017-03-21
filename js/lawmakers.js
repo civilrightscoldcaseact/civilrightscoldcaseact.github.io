@@ -202,3 +202,14 @@ var emailPopup = function (title, lastname, isOversight) {
 		});
 	}
 };
+
+function writeData(name, zipcode, title, oversight) {
+	var lawmakerData =
+	{
+		name : name,
+		zipcode : zipcode,
+		title : title,
+		isOversight : oversight
+	};
+
+}
