@@ -32,7 +32,7 @@ $(function () {
 		var legislativeEmails = {};
 		var mailArray = JSON.stringify(data).split('\n');
 		for (var i = 0; i < mailArray.length; i++) {
-			var kv = mailArray[i].toString().split(',');
+			var kv = JSON.stringify(mailArray[i]).split(',');
 			legislativeEmails[i] = kv[1];
 		}
 
