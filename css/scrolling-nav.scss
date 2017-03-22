@@ -35,13 +35,13 @@ section {
     padding-bottom: 100px;
     text-align: center;
     background: #fff;
-    
+
     h1{
         font-family: merriweather, serif;
         font-size: 34pt;
         color: #e63350;
     }
-    
+
     ul, ol {
         text-align: left;
         display: inline-block;
@@ -53,11 +53,11 @@ section {
 
 .about {
     padding-top: 150px;
-    
+
     h1 {
         color: white;
     }
-    
+
     background-image: linear-gradient(60deg, rgba(0, 36, 61, 0.7) -10%, rgba(0, 144, 239, 0.8) 100%), url({{ site.baseurl }}/images/Capitol-Martin-Falbisoner-CC-BY-SA.JPG);
     background-size: cover;
     background-position: center;
@@ -65,7 +65,7 @@ section {
     color: white;
     a {color: white; text-decoration: underline}
     a:hover {text-decoration: none}
-    
+
 }
 
 .the-problem {
@@ -74,17 +74,22 @@ section {
     background-size: cover;
     padding-top: 150px;
     padding-bottom: 200px;
-    
+
     #slateLink{
         color: #23a7ff;
         text-decoration: underline;
+    }
+
+    #politicoLink{
+      color: #23a7ff;
+      text-decoration: underline; 
     }
 }
 
 .the-solution {
     background-color: #002E64;
     color: white;
-    
+
     h1 {
         color: #23a7ff;
     }

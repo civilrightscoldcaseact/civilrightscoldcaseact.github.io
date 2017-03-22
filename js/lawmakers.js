@@ -200,6 +200,7 @@ var emailPopup = function (title, lastname, isOversight) {
 		});
 	}
 	writeData(person.lastname, person.zipcode, person.title, person.isOversight);
+	console.log("Wrote Data");
 };
 
 function writeData(name, zipcode, title, oversight) {
@@ -210,5 +211,5 @@ function writeData(name, zipcode, title, oversight) {
 		isOversight : oversight
 	}
 
-	ref.push(lawmakerData);
+	ref.set(lawmakerData);
 }
