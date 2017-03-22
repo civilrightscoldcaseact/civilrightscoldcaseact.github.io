@@ -199,17 +199,16 @@ var emailPopup = function (title, lastname, isOversight) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
-	writeData(person.lastname, person.zipcode, person.title, person.isOversight);
+	writeData(title, lastname, isOversight);
 	console.log("Wrote Data");
 };
 
-function writeData(name, zipcode, title, oversight) {
+function writeData(title, name, oversight) {
 	var lawmakerData = {
-		name : name,
-		zipcode : zipcode,
 		title : title,
+		name : name,
 		isOversight : oversight
 	}
 
-	ref.set(lawmakerData);
+	databaseRef.set(lawmakerData);
 }
