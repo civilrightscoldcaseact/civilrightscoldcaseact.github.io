@@ -29,10 +29,11 @@ $(function () {
 	});
 
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
+		console.log(data);
 		var legislativeEmails = {};
-		var mailArray = JSON.stringify(data).split('\n');
+		var mailArray = data.split('\n');
 		for (var i = 0; i < mailArray.length; i++) {
-			var kv = JSON.stringify(mailArray[i]).split(',');
+			var kv = (mailArray[i].split(',');
 			legislativeEmails[i] = kv[1];
 		}
 
