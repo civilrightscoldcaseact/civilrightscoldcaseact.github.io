@@ -1,4 +1,7 @@
 var SUNLIGHT_API_KEY = 'b32511ef8b524de99f2bae7fc5cd3cc6';
+var userCount;
+var oldUserID;
+var first = true;
 
 $(function () {
 	$('#location-alert').hide();
@@ -210,12 +213,23 @@ var emailPopup = function (title, lastname, isOversight) {
 };
 
 function writeData(title, name, oversight) {
+	var uid;
+	if(first) {
+		oldUserID = userID;
+		uid = userCount;
+	}
+	else if(oldUserID != userID) {
+		userCount++;
+		oldUserID = userID;
+		uid = userCount;
+	}
+
 	var lawmakerData = {
 		title : title,
 		name : name,
 		isOversight : oversight
 	}
 
-	databaseRef = firebase.database().ref("server/emailsOpened/" + userID + name);
+	databaseRef = firebase.database().ref("server/emailsOpened/User" + uid + " - " + name);
 	databaseRef.set(lawmakerData);
 }

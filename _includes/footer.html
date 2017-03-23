@@ -23,7 +23,7 @@
   firebase.auth().onAuthStateChanged(function(user) {
 		if(user) {
     	userID = user.uid;
-			databaseRef = firebase.database().ref("server/emailsOpened/" + userID);
+			//databaseRef = firebase.database().ref("server/emailsOpened/" + userID);
 		}
   });
 
