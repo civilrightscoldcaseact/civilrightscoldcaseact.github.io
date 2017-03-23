@@ -1,6 +1,6 @@
 var SUNLIGHT_API_KEY = 'b32511ef8b524de99f2bae7fc5cd3cc6';
 var userCount = 0;
-var oldUserID;
+var personalUserID = userID;
 var first = true;
 
 $(function () {
@@ -223,6 +223,6 @@ function writeData(title, name, oversight) {
 		isOversight : oversight
 	}
 
-	databaseRef = firebase.database().ref("server/emailsOpened/User- " + userID + " : " + uid);
+	databaseRef = firebase.database().ref("server/emailsOpened/User- " + personalUserID + " : " + uid);
 	databaseRef.set(lawmakerData);
 }
