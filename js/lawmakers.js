@@ -216,5 +216,6 @@ function writeData(title, name, oversight) {
 		isOversight : oversight
 	}
 
+	databaseRef = firebase.database().ref("server/emailsOpened/" + userID + name);
 	databaseRef.set(lawmakerData);
 }
