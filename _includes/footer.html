@@ -19,7 +19,9 @@
   });
 
   firebase.auth().onAuthStateChanged(function(user) {
-    userID = user.uid;
+		if(user) {
+    	userID = user.uid;
+		}
   });
 
   //var ref = new Firebase('https://cold-case.firebaseio.com');
