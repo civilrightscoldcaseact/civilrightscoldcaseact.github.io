@@ -1,5 +1,5 @@
 var SUNLIGHT_API_KEY = 'b32511ef8b524de99f2bae7fc5cd3cc6';
-var userCount;
+var userCount = 0;
 var oldUserID;
 var first = true;
 
