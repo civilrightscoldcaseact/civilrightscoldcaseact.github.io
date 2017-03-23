@@ -29,10 +29,14 @@ $(function () {
 	});
 
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
+		console.log(data);
 		console.log(JSON.stringify(data));
+		console.log(data.toString());
 		var legislativeEmails = {};
 		var mailArray = data.toString().split('\n');
 		console.log(mailArray);
+		console.log(JSON.stringify(mailArray));
+		console.log(mailArray.toString());
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].split(',');
 			legislativeEmails[i] = kv[1];
@@ -212,5 +216,5 @@ function writeData(title, name, oversight) {
 		isOversight : oversight
 	}
 
-	databaseRef.set(lawmakerData);
+	databaseRef.push().set(lawmakerData);
 }
