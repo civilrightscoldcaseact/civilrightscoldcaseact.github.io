@@ -217,8 +217,9 @@ function writeData(title, name, oversight) {
 	if(first) {
 		oldUserID = userID;
 		uid = userCount;
+		first = !first;
 	}
-	else if(oldUserID != userID) {
+	if(oldUserID != userID) {
 		userCount++;
 		oldUserID = userID;
 		uid = userCount;
