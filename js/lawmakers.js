@@ -212,5 +212,5 @@ function writeData(title, name, oversight) {
 		isOversight : oversight
 	}
 
-	databaseRef.push().set(lawmakerData);
+	databaseRef.set(lawmakerData);
 }
