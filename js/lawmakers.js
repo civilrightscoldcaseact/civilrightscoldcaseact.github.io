@@ -219,11 +219,9 @@ function writeData(title, name, oversight) {
 		uid = userCount;
 		first = !first;
 	}
-	if(oldUserID != userID) {
-		userCount++;
-		oldUserID = userID;
-		uid = userCount;
-	}
+	userCount++;
+	oldUserID = userID;
+	uid = userCount;
 
 	var lawmakerData = {
 		title : title,
