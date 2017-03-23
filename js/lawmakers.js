@@ -214,16 +214,8 @@ var emailPopup = function (title, lastname, isOversight) {
 
 function writeData(title, name, oversight) {
 	var uid;
-	if(first) {
-		oldUserID = userID;
-		uid = userCount;
-		first = !first;
-	}
-	else {
-		userCount++;
-		oldUserID = userID;
-		uid = userCount;
-	}
+	userCount++;
+	uid = userCount;
 
 	var lawmakerData = {
 		title : title,
@@ -231,6 +223,6 @@ function writeData(title, name, oversight) {
 		isOversight : oversight
 	}
 
-	databaseRef = firebase.database().ref("server/emailsOpened/User" + uid + " - " + name);
+	databaseRef = firebase.database().ref("server/emailsOpened/User- " + userID + " : " + uid);
 	databaseRef.set(lawmakerData);
 }
