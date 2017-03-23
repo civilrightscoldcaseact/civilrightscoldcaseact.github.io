@@ -11,6 +11,8 @@
   firebase.initializeApp(config);
 
   var userID = 0;
+	var first = true;
+	var databaseRef;
 
   firebase.auth().signInAnonymously().catch(function(error) {
     if (error) {
@@ -21,12 +23,16 @@
   firebase.auth().onAuthStateChanged(function(user) {
 		if(user) {
     	userID = user.uid;
+			if(first) {
+				first = !first;
+				databaseRef = firebase.database().ref("server/emailsOpened/" + userID);
+			}
 		}
   });
 
   //var ref = new Firebase('https://cold-case.firebaseio.com');
   //var database = firebase.database();
-	var databaseRef = firebase.database().ref("server/emailsOpened/" + userID);
+	//var databaseRef = firebase.database().ref("server/emailsOpened/" + userID);
 
 
 </script>
