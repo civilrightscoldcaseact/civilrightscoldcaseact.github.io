@@ -31,7 +31,8 @@ $(function () {
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
 		console.log(JSON.stringify(data));
 		var legislativeEmails = {};
-		var mailArray = data.toString().split('\n');
+		var mailArray = data.toString()split('\n');
+		console.log(mailArray);
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].split(',');
 			legislativeEmails[i] = kv[1];
