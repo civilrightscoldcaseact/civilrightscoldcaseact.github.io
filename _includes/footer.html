@@ -9,10 +9,24 @@
     messagingSenderId: "663883980268"
   };
   firebase.initializeApp(config);
+
+  var userID = 0;
+
+  firebase.auth().signInAnonymously().catch(function(error)) {
+    if (error) {
+      console.log(error);
+    }
+  }
+
+  firebase.auth().onAuthStageChanged(function(user)) {
+    userID = user.uid;
+  }
+
   //var ref = new Firebase('https://cold-case.firebaseio.com');
   //var database = firebase.database();
-  var userID = firebase.userID;
+
 	var databaseRef = firebase.database().ref("server/emailsOpened/" + userID);
+
 </script>
 
 <script>
