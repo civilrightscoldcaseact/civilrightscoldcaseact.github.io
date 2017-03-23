@@ -1,6 +1,6 @@
 var SUNLIGHT_API_KEY = 'b32511ef8b524de99f2bae7fc5cd3cc6';
 var userCount = 0;
-var personalUserID = userID;
+var personalUserID;
 var first = true;
 
 $(function () {
@@ -214,6 +214,10 @@ var emailPopup = function (title, lastname, isOversight) {
 
 function writeData(title, name, oversight) {
 	var uid;
+	if(first) {
+		personalUserID = userID;
+		first = !first;
+	}
 	userCount++;
 	uid = userCount;
 
