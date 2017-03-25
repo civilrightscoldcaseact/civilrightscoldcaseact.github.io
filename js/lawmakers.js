@@ -139,7 +139,7 @@ $(function () {
 					}
 
 					var email = legislativeEmails[person.bioguide_id];
-					return email;
+					console.log(email);
 					if (email === undefined) {
 						console.log('suck my gat yeard')
 						email = person.oc_email;
