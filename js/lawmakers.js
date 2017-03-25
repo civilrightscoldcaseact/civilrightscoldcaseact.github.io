@@ -138,7 +138,7 @@ $(function () {
 						extended_title = 'Commissioner';
 					}
 
-					var email = legislativeEmails[i];
+					var email = legislativeEmails[person.bioguide_id];
 					if (email === undefined) {
 						email = person.oc_email;
 					}
