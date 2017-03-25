@@ -31,12 +31,12 @@ $(function () {
 		houseOversightMembers = data.results[0].member_ids;
 	});
 
-	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
+	$.get('https://coldcaseact.com/' + 'files/legislative-directors.csv', function (data) {
 		console.log(data);
 		console.log(JSON.stringify(data));
 		console.log(data.toString());
 		var legislativeEmails = {};
-		var mailArray = data.toString().split('\n');
+		var mailArray = data.split('\n');
 		console.log(mailArray);
 		console.log(JSON.stringify(mailArray));
 		console.log(mailArray.toString());
