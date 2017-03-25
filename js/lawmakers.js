@@ -140,7 +140,7 @@ $(function () {
 
 					var email = legislativeEmails[person.bioguide_id];
 					console.log(email);
-					if (email === undefined) {
+					if (email.replaceAll("\\s","") === undefined) {
 						console.log('suck my gat yeard')
 						email = person.oc_email;
 					}
