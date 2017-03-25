@@ -188,8 +188,8 @@ $(function () {
 	});
 });
 
-var emailPopup = function (title, lastname, isOversight) {
-	if(!isOversight) {
+var emailPopup = function (title, lastname, oversight) {
+	if(!oversight) {
 		$('#emailModal .modal-body').html('');
 		$.get(baseUrl + 'emails/primary.html', function (data) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
@@ -202,8 +202,7 @@ var emailPopup = function (title, lastname, isOversight) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
-	writeData(title, lastname, isOversight);
-	console.log("Wrote Data");
+	writeData(title, lastname, oversight);
 };
 
 function writeData(title, name, oversight) {
@@ -218,7 +217,7 @@ function writeData(title, name, oversight) {
 	var lawmakerData = {
 		title : title,
 		name : name,
-		isOversight : oversight
+		oversight : oversight
 	}
 
 	databaseRef = firebase.database().ref("server/emailsOpened/User- " + personalUserID + " : " + uid);
