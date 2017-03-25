@@ -36,7 +36,7 @@ $(function () {
 		var mailArray = data.split('\n');
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].split(',');
-			legislativeEmails[kv[0]] = kv[1];
+			legislativeEmails[kv[0]] = kv[1].replace(/\s/g,'');
 		}
 
 		if (navigator.geolocation) {
@@ -139,10 +139,7 @@ $(function () {
 					}
 
 					var email = legislativeEmails[person.bioguide_id];
-					console.log(email);
-					//if (email === undefined) {
-					if (!email || 0 === email.replace(/\s/g,'').length) {
-						console.log('suck my gat yeard')
+					if (!email || 0 === email.length) {
 						email = person.oc_email;
 					}
 
