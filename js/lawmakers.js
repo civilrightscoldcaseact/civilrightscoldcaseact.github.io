@@ -9,11 +9,11 @@ $(function () {
 	$('#lawmaker-list').hide();
 	$('#loadingDiv').hide();
 
-	var baseUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
-	var senateJudiciaryUrl = baseUrl + 'SSJU';
-	var houseJudiciaryUrl = baseUrl + 'HSJU';
+	var judiciaryUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
+	var senateJudiciaryUrl = judiciaryUrl + 'SSJU';
+	var houseJudiciaryUrl = judiciaryUrl + 'HSJU';
 
-	var houseOversightUrl = baseUrl + 'HSGO';
+	var houseOversightUrl = judiciaryUrl + 'HSGO';
 
 	var senateJudiciaryMembers = [];
 	var houseJudiciaryMembers = [];
@@ -31,18 +31,12 @@ $(function () {
 		houseOversightMembers = data.results[0].member_ids;
 	});
 
-	$.get('https://coldcaseact.com/' + 'files/legislative-directors.csv', function (data) {
-		console.log(data);
-		console.log(JSON.stringify(data));
-		console.log(data.toString());
+	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
 		var legislativeEmails = {};
 		var mailArray = data.split('\n');
-		console.log(mailArray);
-		console.log(JSON.stringify(mailArray));
-		console.log(mailArray.toString());
 		for (var i = 0; i < mailArray.length; i++) {
 			var kv = mailArray[i].split(',');
-			legislativeEmails[i] = kv[1];
+			legislativeEmails[kv[0]] = kv[1];
 		}
 
 		if (navigator.geolocation) {
