@@ -206,13 +206,10 @@ var emailPopup = function (title, lastname, oversight) {
 };
 
 function writeData(title, name, oversight) {
-	var uid;
 	if(first) {
 		personalUserID = userID;
 		first = !first;
 	}
-	userCount++;
-	uid = userCount;
 
 	var lawmakerData = {
 		title : title,
@@ -220,6 +217,6 @@ function writeData(title, name, oversight) {
 		oversight : oversight
 	}
 
-	databaseRef = firebase.database().ref("server/emailsOpened/User- " + personalUserID + " : " + uid);
+	databaseRef = firebase.database().ref("server/emailsOpened/User - " + personalUserID + " : " + name);
 	databaseRef.set(lawmakerData);
 }
