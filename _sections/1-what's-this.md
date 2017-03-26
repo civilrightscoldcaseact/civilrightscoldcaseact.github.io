@@ -11,4 +11,4 @@ For the full text of the bill, click [here](/images/HR1272.pdf).
 Also check out our article featured on <span id="politicoLink">[Politico](http://www.politico.com/agenda/story/2016/05/how-to-get-justice-for-civil-rights-cold-cases-000118)</span>.
 
 
-click <span class="page-scroll" id="politicoLink">[help](#help)</span> for a convenient tool to reach your local lawmaker.
+click <span id="politicoLink"><a class="page-scroll" href="#help">help</a></span> for a convenient tool to reach your local lawmaker.
