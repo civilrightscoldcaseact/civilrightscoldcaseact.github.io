@@ -155,7 +155,7 @@ $(function () {
 						$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email)),
 						$('<td>').text(person.phone),
 						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
-							emailPopup(extended_title, person.last_name, oversight);
+							emailPopup(extended_title, person.last_name, oversight, person.first_name);
 						}))
 					);
 
@@ -188,7 +188,7 @@ $(function () {
 	});
 });
 
-var emailPopup = function (title, lastname, oversight) {
+var emailPopup = function (title, lastname, oversight, firstname) {
 	if(!oversight) {
 		$('#emailModal .modal-body').html('');
 		$.get(baseUrl + 'emails/primary.html', function (data) {
@@ -202,7 +202,7 @@ var emailPopup = function (title, lastname, oversight) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
-	writeData(title, lastname, oversight);
+	writeData(title, firstname + ' ' + lastname, oversight);
 };
 
 function writeData(title, name, oversight) {
