@@ -83,19 +83,19 @@ $(function () {
 		};
 
 		var renderResults = function (results, type) {
-			var reps = r.offices.filter(
+			var reps = results.offices.filter(
 				office => office.levels
 				&& office.levels.includes('country')
 				&& office.roles
 				&& office.roles.includes('legislatorLowerBody')
-			)[0].officialIndices.map(index => ({type: 'rep', data: r.officials[index]}));
+			)[0].officialIndices.map(index => ({type: 'rep', data: results.officials[index]}));
 			
-			var senators = r.offices.filter(
+			var senators = results.offices.filter(
 				office => office.levels
 				&& office.levels.includes('country')
 				&& office.roles
 				&& office.roles.includes('legislatorUpperBody')
-			)[0].officialIndices.map(index => ({type: 'senator', data: r.officials[index]}));
+			)[0].officialIndices.map(index => ({type: 'senator', data: results.officials[index]}));
 			
 		 	if (reps.length === 0 && senators.length === 0) {
 		 		if (type === 'zip') {
