@@ -83,19 +83,27 @@ $(function () {
 		};
 
 		var renderResults = function (results, type) {
-			var reps = results.offices.filter(
+			var repOffices = results.offices.filter(
 				office => office.levels
 				&& office.levels.includes('country')
 				&& office.roles
 				&& office.roles.includes('legislatorLowerBody')
-			)[0].officialIndices.map(index => ({type: 'rep', data: results.officials[index]}));
+			)
+			var reps = [];
+			if (repOffices.length) {
+				reps = repOffices[0].officialIndices.map(index => ({type: 'rep', data: results.officials[index]}));
+			}
 			
-			var senators = results.offices.filter(
+			var senatorOffices = results.offices.filter(
 				office => office.levels
 				&& office.levels.includes('country')
 				&& office.roles
 				&& office.roles.includes('legislatorUpperBody')
-			)[0].officialIndices.map(index => ({type: 'senator', data: results.officials[index]}));
+			);
+			var senators = [];
+			if (senatorOffices.length) {
+				senators = senatorOffices[0].officialIndices.map(index => ({type: 'senator', data: results.officials[index]}));
+			}
 			
 		 	if (reps.length === 0 && senators.length === 0) {
 		 		if (type === 'zip') {
