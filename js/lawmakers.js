@@ -116,10 +116,10 @@ $(function () {
 
 			$('#lawmaker-list tbody').html('');
 
-			var senators = senators.length;
-			var representatives = reps.length;
-
 			var people = senators.concat(representatives);
+
+			var senatorCount = senators.length;
+			var representativeCount = reps.length;
 
 			for (var i = 0; i < reps.length; i++) {
 				(function (i) {
@@ -156,11 +156,11 @@ $(function () {
 
 			$('#lawmaker-container').prepend($('#email-info').html());
 
-			if (senators > 2) {
+			if (senatorCount > 2) {
 				$('#lawmaker-container').prepend($('#senators-warning').html());
 			}
 
-			if (representatives > 1) {
+			if (representativeCount > 1) {
 				$('#lawmaker-container').prepend($('#representatives-warning').html());
 			}
 		};
