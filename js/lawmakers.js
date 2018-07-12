@@ -121,10 +121,10 @@ $(function () {
 			var senatorCount = senators.length;
 			var representativeCount = reps.length;
 
-			for (var i = 0; i < reps.length; i++) {
+			for (var i = 0; i < people.length; i++) {
 				(function (i) {
-					var type = reps[i].type;
-					var person = reps[i].data;
+					var type = people[i].type;
+					var person = people[i].data;
 					var title = type === 'rep' ? 'Representative' : 'Senator';
 
 					var tr = $('<tr>').append(
