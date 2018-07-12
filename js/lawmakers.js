@@ -134,7 +134,7 @@ $(function () {
 						$('<td>'),
 						$('<td>').text(person.phones && person.phones.length && person.phones[0]),
 						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
-							emailPopup(title, person.name);
+							emailPopup(title, person.name, type);
 						}))
 					);
 
@@ -167,13 +167,19 @@ $(function () {
 	});
 });
 
-var emailPopup = function (title, lastname) {
+var emailPopup = function (title, lastname, type) {
 	//if(!oversight) {
 		$('#emailModal .modal-body').html('');
+	if (type === 'rep') {
 		$.get(baseUrl + 'emails/primary.html', function (data) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
-
 		});
+	} else {
+		$('#emailModal .modal-body').html('');
+		$.get(baseUrl + 'emails/senate.html', function (data) {
+			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
+		});
+	}
 	/*}
 	else {
 		$('#emailModal .modal-body').html('');
