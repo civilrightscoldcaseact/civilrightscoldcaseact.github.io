@@ -124,7 +124,7 @@ $(function () {
 						$('<td>').text(person.name),
 						$('<td>'),
 						$('<td>'),
-						$('<td>').text(person.phones && person.phones.length ? person.phones[0]),
+						$('<td>').text(person.phones && person.phones.length && person.phones[0]),
 						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
 							emailPopup(title, person.name);
 						}))
