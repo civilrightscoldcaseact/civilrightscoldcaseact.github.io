@@ -1,4 +1,4 @@
-var SUNLIGHT_API_KEY = 'b32511ef8b524de99f2bae7fc5cd3cc6';
+var GOOGLE_API_KEY = 'AIzaSyBkkxta9iZcCh7OziHwIg-9HEuShzNT8Lc';
 var userCount = 0;
 var personalUserID;
 var first = true;
@@ -9,27 +9,27 @@ $(function () {
 	$('#lawmaker-list').hide();
 	$('#loadingDiv').hide();
 
-	var judiciaryUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
-	var senateJudiciaryUrl = judiciaryUrl + 'SSJU';
-	var houseJudiciaryUrl = judiciaryUrl + 'HSJU';
-
-	var houseOversightUrl = judiciaryUrl + 'HSGO';
-
-	var senateJudiciaryMembers = [];
-	var houseJudiciaryMembers = [];
-
-	var houseOversightMembers = [];
-
-	$.get(senateJudiciaryUrl, function (data) {
-		senateJudiciaryMembers = data.results[0].member_ids;
-	});
-	$.get(houseJudiciaryUrl, function (data) {
-		houseJudiciaryMembers = data.results[0].member_ids;
-	});
-
-	$.get(houseOversightUrl, function (data) {
-		houseOversightMembers = data.results[0].member_ids;
-	});
+	// var judiciaryUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
+	// var senateJudiciaryUrl = judiciaryUrl + 'SSJU';
+	// var houseJudiciaryUrl = judiciaryUrl + 'HSJU';
+	// 
+	// var houseOversightUrl = judiciaryUrl + 'HSGO';
+	// 
+	// var senateJudiciaryMembers = [];
+	// var houseJudiciaryMembers = [];
+	// 
+	// var houseOversightMembers = [];
+	// 
+	// $.get(senateJudiciaryUrl, function (data) {
+	// 	senateJudiciaryMembers = data.results[0].member_ids;
+	// });
+	// $.get(houseJudiciaryUrl, function (data) {
+	// 	houseJudiciaryMembers = data.results[0].member_ids;
+	// });
+	// 
+	// $.get(houseOversightUrl, function (data) {
+	// 	houseOversightMembers = data.results[0].member_ids;
+	// });
 
 	$.get(baseUrl + 'files/legislative-directors.csv', function (data) {
 		var legislativeEmails = {};
@@ -46,11 +46,10 @@ $(function () {
 					var latitude = pos.coords.latitude;
 					var longitude = pos.coords.longitude;
 
-					var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?latitude=' + latitude + '&longitude=' + longitude + '&apikey=' + SUNLIGHT_API_KEY;
+					var reverseGeocodeUrl = 'https://nominatim.openstreetmap.org/reverse?format=json&lat=' + latitude + '&lon=' + longitude;
 
-					$.get(url, function (data) {
-						$('#loadingDiv').hide();
-						renderResults(data.results, 'location');
+					$.get(reverseGeocodeUrl, function (data) {
+						fetchResults(data.display_name, 'location');
 					});
 				}, function () {
 					$(this).prop('disabled');
@@ -68,18 +67,37 @@ $(function () {
 			}
 		});
 
-		var searchZip = function () {
-			$('#loadingDiv').show();
-			var zip = encodeURIComponent($('#find-lawmakers-zip-text').val().trim());
-			var url = 'https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zip + '&apikey=' + SUNLIGHT_API_KEY;
+		var fetchResults = function (address, type) {
+			var url = 'https://www.googleapis.com/civicinfo/v2/representatives?key=' + GOOGLE_API_KEY + '&address=' + encodeURIComponent(address);
+
 			$.get(url, function (data) {
 				$('#loadingDiv').hide();
-				renderResults(data.results, 'zip');
+				renderResults(data, type);
 			});
 		};
 
+		var searchZip = function () {
+			$('#loadingDiv').show();
+			var zip = encodeURIComponent($('#find-lawmakers-zip-text').val().trim());
+			fetchResults(zip, 'zip');
+		};
+
 		var renderResults = function (results, type) {
-		 	if (results.length === 0) {
+			var reps = r.offices.filter(
+				office => office.levels
+				&& office.levels.includes('country')
+				&& office.roles
+				&& office.roles.includes('legislatorLowerBody')
+			)[0].officialIndices.map(index => ({type: 'rep', data: r.officials[index]}));
+			
+			var senators = r.offices.filter(
+				office => office.levels
+				&& office.levels.includes('country')
+				&& office.roles
+				&& office.roles.includes('legislatorUpperBody')
+			)[0].officialIndices.map(index => ({type: 'senator', data: r.officials[index]}));
+			
+		 	if (reps.length === 0 && senators.length === 0) {
 		 		if (type === 'zip') {
 		 			$('#lawmaker-container').before($('#no-lawmakers-zip').html());
 		 		} else {
@@ -90,84 +108,37 @@ $(function () {
 
 			$('#lawmaker-list tbody').html('');
 
-			results.sort(function (a, b) {
-				var ranks = {
-					'Sen': 0,
-					'Rep': 1,
-					'Del': 2,
-					'Com': 3
-				};
+			var senators = senators.length;
+			var representatives = reps.length;
 
-				return ranks[a.title] - ranks[b.title];
-			});
+			var people = senators.concat(representatives);
 
-			var senators = 0;
-			var representatives = 0;
-
-			for (var i = 0; i < results.length; i++) {
+			for (var i = 0; i < reps.length; i++) {
 				(function (i) {
-					var person = results[i];
-					console.log(person.bioguide_id);
-					var extended_title;
-					var judiciary = false;
-					var oversight = false;
-					if (person.title === 'Sen') {
-						extended_title = 'Senator';
-						for (var j = 0; j < senateJudiciaryMembers.length; j++) {
-							if (person.bioguide_id === senateJudiciaryMembers[j]) {
-								judiciary = true;
-							}
-						}
-						senators++;
-					} else if (person.title === 'Rep') {
-						extended_title = 'Representative';
-						for (var j = 0; j < houseJudiciaryMembers.length; j++) {
-							if (person.bioguide_id === houseJudiciaryMembers[j]) {
-								judiciary = true;
-							}
-						}
-						for (var k = 0; k < houseOversightMembers.length; k++) {
-							if (person.bioguide_id === houseOversightMembers[k]) {
-								oversight = true;
-							}
-						}
-						representatives++;
-					} else if (person.title === 'Del') {
-						extended_title = 'Delegate';
-					} else if (person.title === 'Com') {
-						extended_title = 'Commissioner';
-					}
-
-					var email = legislativeEmails[person.bioguide_id];
-					if (!email || 0 === email.length) {
-						email = person.oc_email;
-					}
-
-					var district = person.state;
-					if (extended_title === 'Representative') {
-						district += person.district;
-					}
+					var type = reps[i].type;
+					var person = reps[i].data;
+					var title = type === 'rep' ? 'Representative' : 'Senator';
 
 					var tr = $('<tr>').append(
-						$('<td>').text(extended_title),
-						$('<td>').text(person.first_name + ' ' + person.last_name),
-						$('<td>').text(district),
-						$('<td>').append($('<a>').text(email).attr('href', 'mailto:' + email)),
-						$('<td>').text(person.phone),
+						$('<td>').text(title),
+						$('<td>').text(person.name),
+						$('<td>'),
+						$('<td>'),
+						$('<td>').text(person.phones && person.phones.length ? person.phones[0]),
 						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
-							emailPopup(extended_title, person.last_name, oversight, person.first_name);
+							emailPopup(title, person.name);
 						}))
 					);
 
-					if (judiciary) {
-						console.log(12);
-						tr.addClass('judiciary');
-					}
-
-					if(oversight) {
-						console.log(13);
-						tr.addClass('oversight');
-					}
+					// if (judiciary) {
+					// 	console.log(12);
+					// 	tr.addClass('judiciary');
+					// }
+					// 
+					// if(oversight) {
+					// 	console.log(13);
+					// 	tr.addClass('oversight');
+					// }
 
 					$('#lawmaker-list tbody').append(tr);
 				})(i);
@@ -188,21 +159,21 @@ $(function () {
 	});
 });
 
-var emailPopup = function (title, lastname, oversight, firstname) {
-	if(!oversight) {
+var emailPopup = function (title, lastname) {
+	//if(!oversight) {
 		$('#emailModal .modal-body').html('');
 		$.get(baseUrl + 'emails/primary.html', function (data) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 
 		});
-	}
+	/*}
 	else {
 		$('#emailModal .modal-body').html('');
 		$.get(baseUrl + 'emails/secondary.html', function (data) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
-	}
-	writeData(title, firstname + ' ' + lastname, oversight);
+	}*/
+	writeData(title, lastname, oversight);
 };
 
 function writeData(title, name, oversight) {
