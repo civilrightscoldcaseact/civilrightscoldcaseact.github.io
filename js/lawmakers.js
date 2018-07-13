@@ -91,7 +91,9 @@ $(function () {
 			)
 			var reps = [];
 			if (repOffices.length) {
-				reps = repOffices[0].officialIndices.map(index => ({type: 'rep', data: results.officials[index]}));
+				var officeName = repOffices[0].name;
+				var district = officeName.substring(officeName.lastIndexOf(' ') + 1);
+				reps = repOffices[0].officialIndices.map(index => ({type: 'rep', data: results.officials[index], district: district}));
 			}
 			
 			var senatorOffices = results.offices.filter(
@@ -102,7 +104,7 @@ $(function () {
 			);
 			var senators = [];
 			if (senatorOffices.length) {
-				senators = senatorOffices[0].officialIndices.map(index => ({type: 'senator', data: results.officials[index]}));
+				senators = senatorOffices[0].officialIndices.map(index => ({type: 'senator', data: results.officials[index], district: null}));
 			}
 			
 		 	if (reps.length === 0 && senators.length === 0) {
@@ -130,7 +132,7 @@ $(function () {
 					var tr = $('<tr>').append(
 						$('<td>').text(title),
 						$('<td>').text(person.name),
-						$('<td>'),
+						$('<td>').text(people[i].district || ''),
 						$('<td>'),
 						$('<td>').text(person.phones && person.phones.length && person.phones[0]),
 						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
