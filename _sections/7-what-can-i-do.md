@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 7
 title: What can I do?
 link: Help
 ---
