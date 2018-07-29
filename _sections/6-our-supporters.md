@@ -3,6 +3,7 @@ order: 6
 title: Our Supporters
 link: Our Supporters
 ---
+
 <ul class="cosponsors senate col-md-6">
       <h2>Senate Sponsor</h2>
       <li class="cosponsor d">
@@ -16,9 +17,9 @@ link: Our Supporters
         </div>
       </li>
       <h2>Senate Cosponsors</h2>
-    </ul>
+</ul>
 
-    <ul class="cosponsors house col-md-6">
+<ul class="cosponsors house col-md-6">
       <h2>Senate Sponsor</h2>
       <li class="cosponsor d">
         <div class="photoblock">
@@ -31,19 +32,19 @@ link: Our Supporters
         </div>
       </li>
       <h2>House Cosponsors</h2>
-    </ul>
+</ul>
 
-    <script id="entry-template" type="text/x-handlebars-template">
-        {% raw %}
-          <li class="cosponsor {{toLowerCase party}}">
-            <div class="photoblock">
-              <img src="{{image}}" class="photoblock-img" alt="{{title}} {{name}} headshot">
-            </div>
-            <div class="info">
-              <p class="name">{{title}} {{name}}</p>
-              <p class="data">{{party}}-{{state}}</p>
-              <p class="joindate">Joined on: {{joindate}}</p>
-            </div>
-          </li>
-        {% endraw %}
-    </script>
+<script id="entry-template" type="text/x-handlebars-template">
+  {% raw %}
+    <li class="cosponsor {{toLowerCase party}}">
+      <div class="photoblock">
+        <img src="{{image}}" class="photoblock-img" alt="{{title}} {{name}} headshot">
+      </div>
+      <div class="info">
+        <p class="name">{{title}} {{name}}</p>
+        <p class="data">{{party}}-{{state}}</p>
+        <p class="joindate">Joined on: {{joindate}}</p>
+      </div>
+    </li>
+  {% endraw %}
+</script>
