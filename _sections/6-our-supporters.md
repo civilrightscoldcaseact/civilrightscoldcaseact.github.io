@@ -20,7 +20,7 @@ link: Our Supporters
 </ul>
 
 <ul class="cosponsors house col-md-6">
-      <h2>Senate Sponsor</h2>
+      <h2>House Sponsor</h2>
       <li class="cosponsor d">
         <div class="photoblock">
           <img src="https://theunitedstates.io/images/congress/450x550/R000515.jpg" class="photoblock-img" alt="Rep. Bobby Rush headshot">
