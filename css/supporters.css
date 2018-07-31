@@ -12,17 +12,18 @@ h2{
 .cosponsors{
   margin: 0 auto;
   padding: 0;
+  text-align: center;
 }
 .cosponsor{
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   position: relative;
   height: 140px;
-  width: 400px;
+  width: 350px;
   border-radius: 5px;
   list-style-type: none;
-  margin: 10px auto;
+  margin: 5px 10px;
   font-family: 'Open Sans', sans-serif;
-  display: flex;
+  display: inline-flex;
   overflow: hidden;
 }
 
