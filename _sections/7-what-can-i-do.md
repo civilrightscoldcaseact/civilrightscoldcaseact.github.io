@@ -17,7 +17,7 @@ If you're in the United States and want to participate directly, we can help you
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="zip code" id="find-lawmakers-zip-text">
 					<span class="input-group-btn">
-						<button id="find-lawmakers-zip" disabled="disabled" class="btn btn-primary">Search by zip</button>
+						<button id="find-lawmakers-zip" disabled="disabled" class="btn btn-primary">Search by address</button>
 					</span>
 				</div>
 			</div>
@@ -84,6 +84,12 @@ If you're in the United States and want to participate directly, we can help you
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<strong>No lawmakers</strong> were found for your area. Check your zip code.
+				</div>
+			</div>
+			<div id="address-error">
+				<div class="alert alert-danger alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					There was an error parsing the address provided.
 				</div>
 			</div>
 			<div id="email-info">
