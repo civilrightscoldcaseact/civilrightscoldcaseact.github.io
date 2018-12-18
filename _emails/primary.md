@@ -6,7 +6,7 @@ I am writing you as a concerned citizen who is looking for your support in passi
 
 At present, the government takes too long to release these files and is too inclined to withhold or redact key information. A review board, such as the one created by the JFK Assassination Records Collection Act of 1992, will be able to expedite the release of these files and balance the public's interest in resolving these historical injustices with the government’s need to protect sources and methods.
 
-The bill (H.R. 1272) has already been introduced into the House of Representatives and gained measures of success in the media, including a publication in Politico and an interview on NPR.
+The bill (H.R. 1272) has already been introduced into the House of Representatives and gained measures of success in the media, including a publication in Politico and an interview on NPR. Its companion bill, S. 3191, has already passed in the Senate.
 
 It's my hope that as a representative of the people, you'll take measures to help push this important piece of legislation through Congress and see its vision become a reality.
 
