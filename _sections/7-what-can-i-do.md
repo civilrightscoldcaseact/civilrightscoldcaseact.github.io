@@ -5,7 +5,7 @@ link: Help
 ---
 Well, for starters, share the news! Share this website and tell your friends and family about our efforts.
 
-If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them.
+If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them. You can also <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a sample email for your representative.
 
 <div class="panel panel-default">
 	<div class="panel-body">
