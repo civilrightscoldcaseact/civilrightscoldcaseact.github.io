@@ -8,6 +8,7 @@ $(function () {
 	$('#senators-warning, #representatives-warning').hide();
 	$('#lawmaker-list').hide();
 	$('#loadingDiv').hide();
+	$('#address-error').hide();
 
 	// var judiciaryUrl = 'https://congress.api.sunlightfoundation.com/committees?apikey=' + SUNLIGHT_API_KEY + '&fields=member_ids&committee_id=';
 	// var senateJudiciaryUrl = judiciaryUrl + 'SSJU';
@@ -73,6 +74,8 @@ $(function () {
 			$.get(url, function (data) {
 				$('#loadingDiv').hide();
 				renderResults(data, type);
+			}).error(function (error) {
+				$('#lawmaker-container').before($('#address-error').html());
 			});
 		};
 
