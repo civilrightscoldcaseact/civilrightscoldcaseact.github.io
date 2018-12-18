@@ -69,7 +69,7 @@ $(function () {
 		});
 
 		var fetchResults = function (address, type) {
-			var url = 'https://www.googleapis.com/civicinfo/v2/representatives?key=' + GOOGLE_API_KEY + '&address=' + address;
+			var url = 'https://www.googleapis.com/civicinfo/v2/representatives?key=' + GOOGLE_API_KEY + '&address=' + encodeURIComponent(address);
 
 			$.get(url, function (data) {
 				$('#loadingDiv').hide();
@@ -82,7 +82,7 @@ $(function () {
 
 		var searchZip = function () {
 			$('#loadingDiv').show();
-			var zip = encodeURIComponent($('#find-lawmakers-zip-text').val().trim());
+			var zip = $('#find-lawmakers-zip-text').val().trim();
 			fetchResults(zip, 'zip');
 		};
 
