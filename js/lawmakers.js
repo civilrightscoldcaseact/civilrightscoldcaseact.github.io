@@ -193,7 +193,7 @@ var emailPopup = function (title, lastname, type) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}*/
-	writeData(title, lastname, oversight);
+//	writeData(title, lastname, oversight);
 };
 
 function writeData(title, name, oversight) {
