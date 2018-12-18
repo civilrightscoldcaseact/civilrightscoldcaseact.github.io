@@ -122,7 +122,7 @@ $(function () {
 
 			$('#lawmaker-list tbody').html('');
 
-			var people = senators.concat(reps);
+			var people = reps;
 
 			var senatorCount = senators.length;
 			var representativeCount = reps.length;
