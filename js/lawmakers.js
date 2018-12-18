@@ -186,6 +186,7 @@ var emailPopup = function (title, lastname, type) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
+	$('#emailModal').modal('show')
 	/*}
 	else {
 		$('#emailModal .modal-body').html('');
