@@ -74,7 +74,8 @@ $(function () {
 			$.get(url, function (data) {
 				$('#loadingDiv').hide();
 				renderResults(data, type);
-			}).error(function (error) {
+			}).fail(function (error) {
+				console.error(12, error);
 				$('#lawmaker-container').before($('#address-error').html());
 			});
 		};
