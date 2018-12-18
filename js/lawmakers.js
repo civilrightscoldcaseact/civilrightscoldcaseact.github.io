@@ -139,7 +139,7 @@ $(function () {
 						$('<td>').text(people[i].district || ''),
 						$('<td>'),
 						$('<td>').text(person.phones && person.phones.length && person.phones[0]),
-						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-toggle', 'modal').attr('data-target', '#emailModal').click(function () {
+						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-target', '#emailModal').click(function () {
 							emailPopup(title, person.name, type);
 						}))
 					);
