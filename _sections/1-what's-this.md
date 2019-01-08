@@ -12,3 +12,5 @@ Also check out our article featured on <span id="politicoLink">[Politico](http:/
 
 
 click <span id="politicoLink"><a class="page-scroll" href="#help">help</a></span> for a convenient tool to reach your local lawmaker.
+
+On January 8th, 2019, the Cold Case Act was signed into law by President Donald Trump.
