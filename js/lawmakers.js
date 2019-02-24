@@ -196,7 +196,7 @@ var emailPopup = function (title, lastname, type, appropriations) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
-	$('#emailModal').modal('show')
+	
 	}
 	else {
 		$('#emailModal .modal-body').html('');
@@ -204,6 +204,7 @@ var emailPopup = function (title, lastname, type, appropriations) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
 	}
+	$('#emailModal').modal('show')
 //	writeData(title, lastname, oversight);
 };
 
