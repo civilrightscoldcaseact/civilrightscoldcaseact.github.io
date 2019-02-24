@@ -135,15 +135,18 @@ $(function () {
 					var type = people[i].type;
 					var person = people[i].data;
 					var title = type === 'rep' ? 'Representative' : 'Senator';
+					var phone = person.phones && person.phones.length && person.phones[0].trim();
+					
+					var appropriations = houseAppropriationsPhones.includes(phone) || senateAppropriationsPhones.includes(phone);
 
 					var tr = $('<tr>').append(
 						$('<td>').text(title),
 						$('<td>').text(person.name),
 						$('<td>').text(people[i].district || ''),
 						$('<td>'),
-						$('<td>').text(person.phones && person.phones.length && person.phones[0]),
+						$('<td>').text(phone),
 						$('<td>').append($('<span>').addClass('glyphicon glyphicon-envelope').attr('aria-hidden', 'true').attr('data-target', '#emailModal').click(function () {
-							emailPopup(title, person.name, type);
+							emailPopup(title, person.name, type, appropriations);
 						}))
 					);
 
@@ -156,6 +159,10 @@ $(function () {
 					// 	console.log(13);
 					// 	tr.addClass('oversight');
 					// }
+					
+					if (appropriations) {
+						tr.addClass('appropriations');	
+					}
 
 					$('#lawmaker-list tbody').append(tr);
 				})(i);
@@ -176,8 +183,8 @@ $(function () {
 	});
 });
 
-var emailPopup = function (title, lastname, type) {
-	//if(!oversight) {
+var emailPopup = function (title, lastname, type, appropriations) {
+	if(!appropriations) {
 		$('#emailModal .modal-body').html('');
 	if (type === 'rep') {
 		$.get(baseUrl + 'emails/primary.html', function (data) {
@@ -190,13 +197,13 @@ var emailPopup = function (title, lastname, type) {
 		});
 	}
 	$('#emailModal').modal('show')
-	/*}
+	}
 	else {
 		$('#emailModal .modal-body').html('');
 		$.get(baseUrl + 'emails/secondary.html', function (data) {
 			$('#emailModal .modal-body').html(data.replace('..TITLE..', title).replace('..LASTNAME..', lastname));
 		});
-	}*/
+	}
 //	writeData(title, lastname, oversight);
 };
 
