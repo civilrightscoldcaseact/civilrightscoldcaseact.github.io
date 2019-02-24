@@ -9,4 +9,5 @@ At present, the government takes too long to release these files and is too incl
 According to the Congressional Budget Office, the _Civil Rights Cold Case Records Collection Act_ “would not significantly increase net direct spending or on-budget deficits.” As such, appropriate funding by your committee would present no additional burden to the taxpayers. It’s my hope that as a member of the Appropriations committee, you’ll take measures to secure the necessary  funding this legislation is entitled to.
 
 Thank you!
+
 Sincerely,
