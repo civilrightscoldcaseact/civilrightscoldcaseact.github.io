@@ -29,6 +29,17 @@ html {
     }
 }
 
+.navbar{
+  border-bottom: none;
+}
+
+.banner{
+  background-color: #9bfaff;
+  font-size: 28px;
+  padding: 12px 0;
+  margin: 0;
+  color: #333;
+}
 section {
     min-height: 40%;
     padding-top: 100px;
@@ -82,7 +93,7 @@ section {
 
     #politicoLink{
       color: #23a7ff;
-      text-decoration: underline; 
+      text-decoration: underline;
     }
 }
 
