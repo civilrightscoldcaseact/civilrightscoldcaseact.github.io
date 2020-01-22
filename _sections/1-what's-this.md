@@ -1,6 +1,6 @@
 ---
 order: 1
-title: The Civil Rights Cold Case Act
+title: What is the Cold Case Act?
 link: About
 ---
 
