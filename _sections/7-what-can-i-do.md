@@ -15,9 +15,9 @@ If you're in the United States and want to participate directly, we can help you
 			</div>
 			<div class="col-md-3">
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="address" id="find-lawmakers-zip-text">
+					<input type="text" class="form-control" placeholder="zipcode" id="find-lawmakers-zip-text">
 					<span class="input-group-btn">
-						<button id="find-lawmakers-zip" disabled="disabled" class="btn btn-primary">Search by address</button>
+						<button id="find-lawmakers-zip" disabled="disabled" class="btn btn-primary">Search by Zipcode</button>
 					</span>
 				</div>
 			</div>
