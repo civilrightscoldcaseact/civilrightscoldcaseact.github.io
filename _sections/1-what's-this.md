@@ -1,6 +1,6 @@
 ---
 order: 1
-title: What is the Cold Case Act?
+title: The Cold Case Act
 link: About
 ---
 On January 8th, 2019, the Cold Case Act was signed into law by President Donald Trump.
