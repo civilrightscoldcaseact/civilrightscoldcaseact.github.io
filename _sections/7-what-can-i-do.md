@@ -22,7 +22,7 @@ We are currently working on securing the nominations for our board. We are worki
 <div>
 <div>
 <div>
-If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them. You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a template email provided for you to send to your representative.
+If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them, expressing your support for our bill while pushing for nominations. 
 <div>	
 <div>
 <div>
@@ -44,6 +44,7 @@ Thank you, all help your help is greatly appreciated.
 		<div class="row">
 			<div class="col-md-3 col-md-offset-3">
 				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>
+				You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a template email provided for you to send to your representative.
 
 				</div>
 			</div>
