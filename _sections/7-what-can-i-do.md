@@ -22,7 +22,7 @@ We are currently working on securing the nominations for our board. We are worki
 <div>
 <div>
 <div>
-If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them. You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a sample email for your representative.
+If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them. You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a template email provided for you to send to your representative.
 <div>	
 <div>
 <div>
@@ -44,9 +44,6 @@ Thank you, all help your help is greatly appreciated.
 		<div class="row">
 			<div class="col-md-3 col-md-offset-3">
 				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>
-			</div>
-			<div class="col-md-3">
-				<div class="input-group">
 
 					</span>
 				</div>
@@ -74,7 +71,10 @@ Thank you, all help your help is greatly appreciated.
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<
+						
+						
+						type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title" id="emailModalLabel">Sample email</h4>
 					</div>
 					<div class="modal-body">
@@ -107,25 +107,8 @@ Thank you, all help your help is greatly appreciated.
 			<div id="no-lawmakers-location">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<strong>No lawmakers</strong> were found for your area. If you are in the United States, try using a zip code to search instead.
-				</div>
-			</div>
-			<div id="no-lawmakers-zip">
-				<div class="alert alert-danger alert-dismissible fade in" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<strong>No lawmakers</strong> were found for your area. Check your zip code.
-				</div>
-			</div>
-			<div id="address-error">
-				<div class="alert alert-danger alert-dismissible fade in" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					There was an error parsing the address provided.
-				</div>
-			</div>
-			<div id="email-info">
-				<div class="alert alert-info alert-dismissible fade in" role="alert">
+					
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-					Click the email icon next to a lawmaker's name for a sample email you can send.
 				</div>
 			</div>
