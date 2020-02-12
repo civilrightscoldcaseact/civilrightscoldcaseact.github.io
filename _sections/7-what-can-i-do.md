@@ -4,22 +4,26 @@ title: What can I do to contribute?
 link: Help Us
 ---
 
-<table width=200 height=200 style=”filter: alpha(opacity=100,finishopacity=0,style=2);”><tr><td align=center bgcolor=blue> <b><font size=”4″>
-	Well, for starters, share the news! Share this website and tell your friends and family about our efforts.
 
+Well, for starters, share the news! Share this website and tell your friends and family about our efforts.
+
+<div>
+	
 Section 5 of our legislation essentially creates a Civil Rights Cold Case Records Review Board. This board is will be responsible for releasing the case information to the public. Stating,"The President shall appoint, by and with the advice and consent of the Senate, 5 individuals to serve as members of the Review Board, to ensure and facilitate the review, transmission to the Archivist, and public disclosure of civil rights cold case records."
 
-
-
+<div>
+	<div>
 We are currently working on securing the nominations for our board. We are working to reach the President, to urge him to appoint the nominees that the legislation is entitled to. 
-
+<div>
+	<div>
 
 If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them. You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a sample email for your representative.
 
+<div>
+	<div>
 
 
-
-Thank you, all help your help is greatly appreciated.</font></b></td> </tr></table> 
+Thank you, all help your help is greatly appreciated.
 
 
 
