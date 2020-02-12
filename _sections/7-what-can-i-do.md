@@ -48,7 +48,8 @@ Thank you, all help your help is greatly appreciated.
 				</div>
 					</div>
 				
-You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a template email provided for you to send to your representative.
+You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here </a> to view a template email provided for you to send to your representative.
+
 
 				</div>
 			</div>
@@ -70,8 +71,7 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 			</table>
 		</div>
 		<div id="loadingDiv">Loading lawmaker data...</div>
-
-						
+			
 						
 <span aria-hidden="true"> </span> 
 <h4 class="modal-title" id="emailModalLabel"> Sample Email </h4>
