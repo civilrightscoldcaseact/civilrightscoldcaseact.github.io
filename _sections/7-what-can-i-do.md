@@ -78,7 +78,7 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 						
 						
 						
-		<span aria-hidden="true">&times;</span> 
+		<span aria-hidden="true">& times; </span> 
 						<h4 class="modal-title" id="emailModalLabel"> Sample Email </h4>
 					</div>
 					<div class="modal-body">
@@ -86,11 +86,11 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
 					</div>
-				</div>
+				<div>
 		<div class="alerts">
 			<div id="location-alert">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
-			</div>
+			<div>
 			<div id="senators-warning">
 				<div class="alert alert-warning alert-dismissible fade in" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
