@@ -48,7 +48,7 @@ Thank you, all help your help is greatly appreciated.
 				</div>
 					</div>
 				
-You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here </a> to view a template email provided for you to send to your representative.
+You can <a href="javascript:void(0)" onclick="primary.md('Representative', '', 'rep')">click here </a> to view a template email provided for you to send to your representative.
 
 
 				</div>
