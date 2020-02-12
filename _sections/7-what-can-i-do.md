@@ -1,11 +1,21 @@
 ---
 order: 7
 title: What can I do?
-link: Help
+link: Help Us
 ---
 Well, for starters, share the news! Share this website and tell your friends and family about our efforts.
 
-If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them. You can also <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a sample email for your representative.
+Section 5 of our legislation essentially creates a Civil Rights Cold Case Records Review Board. This board is will be responsible for releasing the case information to the public.
+
+"The President shall appoint, by and with the advice and consent of the Senate, 5 individuals to serve as members of the Review Board, to ensure and facilitate the review, transmission to the Archivist, and public disclosure of civil rights cold case records."
+
+We are currently working on securing the nominations for our board. We are working to reach the President, to urge him to appoint the nominees that the legislation is entitled to. 
+
+If you're in the United States and want to participate directly, we can help you find your lawmakers and write an email to them. You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a sample email for your representative.
+
+
+Thank you, all help with this effort is greatly appreciated.
+
 
 <div class="panel panel-default">
 	<div class="panel-body">
