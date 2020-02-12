@@ -92,9 +92,6 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 		<div class="alerts">
 			<div id="location-alert">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<strong>Failed</strong> to retrieve location. You can use the zip code search instead.
-				</div>
 			</div>
 			<div id="senators-warning">
 				<div class="alert alert-warning alert-dismissible fade in" role="alert">
