@@ -33,7 +33,7 @@ Thank you, all help your help is greatly appreciated.
 <div>
 <div>
 <div>
-<div>	
+<div> 
 <div>	
 <div>
 <div>
@@ -79,7 +79,7 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 						
 						
 		<span aria-hidden="true">&times;</span>
-						<h4 class="modal-title" id="emailModalLabel">Sample email</h4>
+						<h4 class="modal-title" id="emailModalLabel"> Sample Email</h4>
 					</div>
 					<div class="modal-body">
 					</div>
