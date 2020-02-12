@@ -31,6 +31,9 @@ link: FAQs
 
 
 <font size="5" color="red">Q: Aren't there security problems?</font>
+
+
+
 <font size="5" color="blue">A: No. Part of the bill allows the president to override any decision of the review board. 
 
 The law is modeled after the John F. Kennedy Assassination Records Collection Act of 1992, which created a similar review board for the Kennedy assassination. 
