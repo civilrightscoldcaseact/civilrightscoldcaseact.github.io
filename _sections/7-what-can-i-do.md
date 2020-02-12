@@ -44,7 +44,11 @@ Thank you, all help your help is greatly appreciated.
 		<div class="row">
 			<div class="col-md-3 col-md-offset-3">
 				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>
-				You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a template email provided for you to send to your representative.
+				
+				</div>
+					</div>
+				
+You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', 'rep')">click here</a> to view a template email provided for you to send to your representative.
 
 				</div>
 			</div>
