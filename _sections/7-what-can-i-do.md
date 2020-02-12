@@ -75,7 +75,7 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<
+						
 						
 						
 		<span aria-hidden="true">&times;</span>
@@ -101,7 +101,7 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 			</div>
 			<div id="representatives-warning">
 				<div class="alert alert-warning alert-dismissible fade in" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times
 					<strong>Warning:</strong> Your zip code spans multiple districts, so more than one representative was found. Make sure you pick the representative for your district.
 				</div>
 			</div>
