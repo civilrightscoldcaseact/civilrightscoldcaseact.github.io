@@ -93,13 +93,13 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 			<div>
 			<div id="senators-warning">
 				<div class="alert alert-warning alert-dismissible fade in" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"> </span></button>
 					<strong>Warning:</strong> Your zip code spans multiple states, so more than two senators were found. Make sure you pick the senators for your state.
 				</div>
 			</div>
 			<div id="representatives-warning">
 				<div class="alert alert-warning alert-dismissible fade in" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">
 					<strong>Warning:</strong> Your zip code spans multiple districts, so more than one representative was found. Make sure you pick the representative for your district.
 				</div>
 			</div>
