@@ -47,8 +47,7 @@ Thank you, all help your help is greatly appreciated.
 			</div>
 			<div class="col-md-3">
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder= id="find-lawmakers-zip-text">
-					<span class="input-group-btn">
+
 					</span>
 				</div>
 			</div>
