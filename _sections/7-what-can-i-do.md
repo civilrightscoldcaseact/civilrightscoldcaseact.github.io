@@ -73,8 +73,8 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 
 						
 						
-		<span aria-hidden="true"> </span> 
-						<h4 class="modal-title" id="emailModalLabel"> Sample Email </h4>
+<span aria-hidden="true"> </span> 
+<h4 class="modal-title" id="emailModalLabel"> Sample Email </h4>
 					</div>
 					<div class="modal-body">
 					</div>
