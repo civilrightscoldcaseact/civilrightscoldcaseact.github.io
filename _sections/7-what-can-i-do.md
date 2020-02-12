@@ -70,11 +70,7 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 			</table>
 		</div>
 		<div id="loadingDiv">Loading lawmaker data...</div>
-		<div id="email-text"></div>
-		<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
+
 						
 						
 						
