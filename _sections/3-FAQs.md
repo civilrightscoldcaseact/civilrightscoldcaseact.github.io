@@ -4,7 +4,7 @@ title: FAQs
 link: FAQs
 ---
 
-<pre> tag
+<pre>
 
 <font size="5" color="red">Q: What's wrong with FOIA? </font>
 
