@@ -1,6 +1,6 @@
 ---
-order: 7
-title: What can I do?
+order: 2
+title: What can I do to contribute? 
 link: Help Us
 ---
 
