@@ -45,7 +45,6 @@ Thank you, all help your help is greatly appreciated.
 			<div class="col-md-3 col-md-offset-3">
 				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>
 
-					</span>
 				</div>
 			</div>
 		</div>
