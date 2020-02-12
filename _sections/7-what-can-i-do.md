@@ -49,7 +49,7 @@ Thank you, all help your help is greatly appreciated.
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="zipcode" id="find-lawmakers-zip-text">
 					<span class="input-group-btn">
-						<button id="find-lawmakers-zip" disabled="disabled" class="btn btn-primary">Search by Zipcode</button>
+						<button id="find-lawmakers-zip" disabled="disabled" class="btn btn-primary">Search by 
 					</span>
 				</div>
 			</div>
