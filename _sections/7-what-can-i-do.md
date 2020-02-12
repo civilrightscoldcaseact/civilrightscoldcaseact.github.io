@@ -87,8 +87,6 @@ You can <a href="javascript:void(0)" onclick="emailPopup('Representative', '', '
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
-			</div>
-		</div>
 		<div class="alerts">
 			<div id="location-alert">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
