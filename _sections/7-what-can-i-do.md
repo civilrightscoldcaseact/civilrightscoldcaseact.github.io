@@ -85,3 +85,4 @@ Thank you, all help your help is greatly appreciated.
 			<div id="no-lawmakers-location">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
 				</div>	
+					</div>
