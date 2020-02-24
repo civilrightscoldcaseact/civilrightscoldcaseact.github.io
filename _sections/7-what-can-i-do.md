@@ -38,7 +38,6 @@ Thank you, all help your help is greatly appreciated.
 <div>
 <div>
 <div>
-<pre>
 
 EMAIL TEMPLATE
 
@@ -50,11 +49,10 @@ Thank you!
 Sincerely,
 
 
-
 <div class="panel panel-default">
 	<div class="panel-body">
 		<div class="row">
-	
+	<div class="col-md-3 col-md-offset-3">
 				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>
 				
 				</div>
