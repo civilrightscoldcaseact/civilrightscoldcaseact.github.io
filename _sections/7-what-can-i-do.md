@@ -39,7 +39,7 @@ Thank you, all help your help is greatly appreciated.
 <div>
 <div>
 	
-<div style="overflow:auto;width:150px;height:120px;background:#eee;float:left;left:200px;top:0;padding:3px;">
+<div style="overflow:auto">
 <p>Right Frame.</p>
 <p>EMAIL TEMPLATE
 
