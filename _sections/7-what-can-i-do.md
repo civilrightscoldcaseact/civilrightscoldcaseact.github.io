@@ -60,14 +60,12 @@ YOUR NAME
 
 
 
-
-
 <div class="panel panel-default">
 	<div class="panel-body">
 		<div class="row">
-	<div class="col-md-3 col-md-offset-3">
+			<div class="col-md-3 col-md-offset-3">
 				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>		
-				</div>
+					</div>
 					</div>
 					</div>
 		
@@ -89,10 +87,9 @@ YOUR NAME
 		</div>
 		<div id="loadingDiv">Loading lawmaker data...</div>
 			
-	
 <div class="alerts">
 			<div id="location-alert">
-				<div class="alert alert-danger alert-dismissible fade in" role="alert">
+			<div class="alert alert-danger alert-dismissible fade in" role="alert">
 			<div>
 			<div id="senators-warning">
 				<div class="alert alert-warning alert-dismissible fade in" role="alert">
@@ -108,5 +105,4 @@ YOUR NAME
 			</div>
 			<div id="no-lawmakers-location">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
-					
-					
+				</div>	
