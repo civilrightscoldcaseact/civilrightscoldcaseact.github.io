@@ -38,6 +38,7 @@ Thank you, all help your help is greatly appreciated.
 <div>
 <div>
 <div>
+	
 <div class="boxed">
 EMAIL TEMPLATE
 
@@ -49,9 +50,6 @@ Thank you!
 Sincerely,
 
 </div>
-.boxed {
-  border: 1px solid red ;
-} 
 
 <div class="panel panel-default">
 	<div class="panel-body">
