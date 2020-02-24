@@ -5,7 +5,16 @@ link: Our Supporters
 ---
 
 <div class="row">
-  
+    <ul class="cosponsors col-md-6">
+    <h2>Senate Sponsor</h2>
+    <li class="cosponsor d">
+      <div class="photoblock">
+        <img src="https://theunitedstates.io/images/congress/450x550/J000300.jpg" class="photoblock-img" alt="Sen. Doug Jones headshot">
+      </div>
+      <div class="info">
+        <p class="name">Sen. Doug Jones</p>
+        <p class="data">D-AL</p>
+        <p class="joindate">Introduced on: 2018/07/10</p>
       </div>
     </li>
   </ul>
