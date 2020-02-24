@@ -66,13 +66,12 @@ YOUR NAME
 	<div class="panel-body">
 		<div class="row">
 	<div class="col-md-3 col-md-offset-3">
-				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>
-				
+				<button id="find-lawmakers-location" disabled="disabled" class="btn btn-primary">Use my location</button>		
 				</div>
 					</div>
 					</div>
 		
-		<div id="lawmaker-container">
+<div id="lawmaker-container">
 			<table id="lawmaker-list" class="table table-striped table-responsive">
 				<thead>
 					<tr>
@@ -83,7 +82,7 @@ YOUR NAME
 						<td>Phone</td>
 						<td></td>
 					</tr>
-				</thead>
+</thead>
 				<tbody>
 				</tbody>
 			</table>
@@ -91,7 +90,7 @@ YOUR NAME
 		<div id="loadingDiv">Loading lawmaker data...</div>
 			
 	
-		<div class="alerts">
+<div class="alerts">
 			<div id="location-alert">
 				<div class="alert alert-danger alert-dismissible fade in" role="alert">
 			<div>
