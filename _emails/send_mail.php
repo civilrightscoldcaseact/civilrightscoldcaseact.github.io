@@ -74,3 +74,5 @@ else {
 	header( "Location: $thankyou_page" );
 }
 ?>
+
+</div>
