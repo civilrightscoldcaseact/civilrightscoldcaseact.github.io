@@ -18,7 +18,7 @@ Section 5 of our legislation essentially creates a Civil Rights Cold Case Record
 <div>
 <div>
 We are currently working on securing the nominations for our board. We are working to reach the President, to urge him to appoint the nominees that the legislation is entitled to. 
-<div>	
+<div>
 <div>
 <div>
 <div>
@@ -38,7 +38,7 @@ Thank you, all help your help is greatly appreciated.
 <div>
 <div>
 <div>
-
+<div class="boxed">
 EMAIL TEMPLATE
 
 Dear ..TITLE.. ..LASTNAME..,
@@ -48,6 +48,10 @@ Section 5 of the law essentially creates a Review Board to facilitate the releas
 Thank you!
 Sincerely,
 
+</div>
+.boxed {
+  border: 1px solid red ;
+} 
 
 <div class="panel panel-default">
 	<div class="panel-body">
