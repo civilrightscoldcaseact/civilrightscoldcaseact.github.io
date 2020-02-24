@@ -40,7 +40,7 @@ Thank you, all help your help is greatly appreciated.
 <div>
 	
 <div style="overflow:auto">
-<p>Right Frame.</p>
+
 <p>EMAIL TEMPLATE
 
 Dear ..TITLE.. ..LASTNAME..,
