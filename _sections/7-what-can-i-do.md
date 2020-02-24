@@ -87,8 +87,6 @@ Thank you, all help your help is greatly appreciated.
 				</div>	
 
 
-<form action="/html/tags/html_form_tag_action.cfm" method="post">
-<textarea name="EMAIL TEMPLATE" id="EMAIL TEMPLATE" style="width:92%;height:140px;padding:2%;font-size:1.2em;border:12px outset #0000FF;">
 EMAIL TEMPLATE 
 	
 	
@@ -100,5 +98,3 @@ Thank you!
 
 Sincerely,
 YOUR NAME 
-
-</textarea><br>
