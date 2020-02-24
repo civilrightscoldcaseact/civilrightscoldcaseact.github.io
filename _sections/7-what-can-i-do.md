@@ -47,7 +47,11 @@ Thank you, all help your help is greatly appreciated.
 				
 				</div>
 					</div>
-				
+					</div>
+	
+	
+	
+	
 <pre>
 EMAIL TEMPLATE
 
@@ -59,9 +63,8 @@ Thank you!
 Sincerely,
 
 
-				</div>
-			</div>
-		</div>
+		
+		
 		<div id="lawmaker-container">
 			<table id="lawmaker-list" class="table table-striped table-responsive">
 				<thead>
